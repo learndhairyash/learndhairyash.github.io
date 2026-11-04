@@ -133,24 +133,35 @@ async function handleEventSuggestion(request, env) {
     return json({ error: "Please use a valid public web link beginning with http:// or https://." }, 400);
   }
   const email = cleanText(body.contributor_email, 254).toLowerCase();
+  const organiserEmail = cleanText(body.organiser_email, 254).toLowerCase();
   if (email && !validEmail(email)) return json({ error: "Please check the optional email address." }, 400);
+  if (organiserEmail && !validEmail(organiserEmail)) return json({ error: "Please check the organiser email address." }, 400);
 
   const payload = {
     event_name: cleanText(body.event_name, 180),
     source_url: sourceUrl,
+    source_platform: cleanText(body.source_platform, 60),
     event_date: cleanText(body.event_date, 10),
+    event_date_end: cleanText(body.event_date_end, 10),
     location: cleanText(body.location, 180),
     category: cleanText(body.category, 80),
     organiser: cleanText(body.organiser, 180),
+    organiser_phone: cleanText(body.organiser_phone, 40),
+    organiser_email: organiserEmail,
     poster_url: posterUrl,
     details: cleanText(body.details, 5000),
     contributor_name: cleanText(body.contributor_name, 100),
     contributor_email: email
   };
-  if (payload.event_date && !/^\d{4}-\d{2}-\d{2}$/.test(payload.event_date)) {
-    return json({ error: "Please enter the event date in the date field, or leave it blank." }, 400);
+  for (const key of ["event_date", "event_date_end"]) {
+    if (payload[key] && !/^\d{4}-\d{2}-\d{2}$/.test(payload[key])) {
+      return json({ error: "Please enter valid event dates, or leave the date fields blank." }, 400);
+    }
   }
-  const useful = ["event_name", "source_url", "event_date", "location", "category", "organiser", "poster_url", "details"];
+  if (payload.event_date && payload.event_date_end && payload.event_date_end < payload.event_date) {
+    return json({ error: "The event end date cannot be before its start date." }, 400);
+  }
+  const useful = ["event_name", "source_url", "event_date", "event_date_end", "location", "category", "organiser", "organiser_phone", "organiser_email", "poster_url", "details"];
   if (!useful.some(key => payload[key])) {
     return json({ error: "Please share at least one event detail or source link." }, 400);
   }
