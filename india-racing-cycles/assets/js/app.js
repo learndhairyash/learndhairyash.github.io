@@ -17,7 +17,7 @@
     return arr.length?'<div class="source-links">'+arr.join("")+'</div>':"";
   }
   function eventCard(e){
-    const poster=e.poster_url?'<img src="'+safeUrl(e.poster_url)+'" alt="'+safe(e.title)+' official event poster" loading="lazy" referrerpolicy="no-referrer">':'<span class="material-symbols-rounded">pedal_bike</span><span class="poster-caption">Poster not supplied by source</span>';
+    const poster=e.poster_url?'<img src="'+safeUrl(e.poster_url)+'" alt="'+safe(e.title)+' official event poster" loading="lazy" referrerpolicy="no-referrer">':(e.image_url?'<img src="'+safeUrl(e.image_url)+'" alt="'+safe(e.image_note||e.title+" official event visual")+'" loading="lazy" referrerpolicy="no-referrer"><span class="poster-caption">Official event visual · not a poster</span>':'<span class="material-symbols-rounded">pedal_bike</span><span class="poster-caption">Poster not supplied by source</span>');
     const register=e.registration_url?'<a class="button button-filled" href="'+safeUrl(e.registration_url)+'" target="_blank" rel="noopener">Register <span class="material-symbols-rounded">open_in_new</span></a>':(e.contact_email?'<a class="button button-filled" href="'+safeUrl("mailto:"+e.contact_email)+'">Contact organiser <span class="material-symbols-rounded">mail</span></a>':"");
     const phone=e.contact_phone?'<div class="detail-row"><span class="material-symbols-rounded">call</span><span>'+safe(e.contact_phone)+'</span></div>':"";
     const sourceLabel = e.status === "postponed" ? '<span class="chip">Postponed — check organiser</span>' : (e.confidence === "community-screenshot" ? '<span class="chip">Community archive</span>' : '<span class="chip confirmed">Source checked</span>');
