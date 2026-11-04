@@ -39,7 +39,7 @@ Two past-event entries are clearly labelled as transcribed from the community-ad
 
 ## Community event suggestions
 
-The fourth page, suggest-event.html, lets visitors send any information they have: an event name, public Facebook/Instagram or organiser link, date, city, cycling category, organiser, poster/image URL, free-text notes and optional contact details. Most fields are optional; at least one useful event clue is required.
+The fourth page, suggest-event.html, lets visitors send any information they have: an event name, public Facebook/Instagram/LinkedIn/BookMyShow or organiser link, source platform, start/end dates, city, cycling category, organiser, organiser mobile/email, poster/image URL, free-text notes and optional contributor contact details. Most fields are optional; at least one useful event clue is required.
 
 Suggestions are saved as pending in the Cloudflare D1 event_suggestions table. They are NOT published automatically. The administrator checks the source and manually adds approved events to data/events.json. The form is deliberately transparent when its backend is not connected: it will not claim that a suggestion was sent when no server URL has been configured.
 
