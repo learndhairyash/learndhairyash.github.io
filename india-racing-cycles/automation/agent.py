@@ -156,19 +156,28 @@ def domain_is_official(url, approved):
     return any(host == d or host.endswith("." + d) for d in approved)
 
 
-def valid_candidate(item, known_sources):
+def valid_candidate(item, known_sources, current_events):
     source_url = canonical_url(item.get("source_url", ""))
     matched = next((s for s in known_sources if canonical_url(s.get("url", "")) == source_url), None)
-    if not matched:
+    if not matched or not item.get("evidence_quote"):
         return False
-    if not item.get("title") or not item.get("evidence_quote"):
+
+    # Existing-event updates may change only status/date/details and need not
+    # repeat the title or date, provided they identify a known event ID.
+    existing = next((e for e in current_events if e.get("id") == item.get("id")), None)
+    if not existing and (not item.get("title") or not item.get("start_date")):
         return False
+
     try:
-        start = date.fromisoformat(item.get("start_date", ""))
-        end_value = item.get("end_date")
-        if end_value and date.fromisoformat(end_value) < start:
-            return False
-    except ValueError:
+        start_value = item.get("start_date") or (existing or {}).get("start_date", "")
+        if start_value:
+            start = date.fromisoformat(start_value)
+            end_value = item.get("end_date")
+            if end_value and date.fromisoformat(end_value) < start:
+                return False
+        elif item.get("end_date"):
+            date.fromisoformat(item["end_date"])
+    except (TypeError, ValueError):
         return False
     return True
 
@@ -197,7 +206,7 @@ def main():
     approved = config.get("approved_official_domains", [])
     review_items = review_doc.get("items", [])
     for candidate in candidates:
-        if not valid_candidate(candidate, config.get("source_pages", [])):
+        if not valid_candidate(candidate, config.get("source_pages", []), events):
             review_items.append({"received_at": TODAY.isoformat(), "reason": "Missing/invalid evidence or unconfigured source URL", "candidate": candidate})
             continue
         source = next(s for s in config["source_pages"] if canonical_url(s["url"]) == canonical_url(candidate["source_url"]))
