@@ -3,10 +3,12 @@ name: India Racing Cycles — daily research
 on:
   schedule:
     - cron: "30 1 * * *" # 07:00 Asia/Kolkata
+    - cron: "0 3 1 * *"  # 08:30 Asia/Kolkata on the first day of each month
   workflow_dispatch:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: india-racing-cycles-daily
@@ -15,7 +17,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -29,13 +31,31 @@ jobs:
         run: pip install -r india-racing-cycles/automation/requirements.txt
       - name: Research public cycling sources
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY: \${{ secrets.GEMINI_API_KEY }}
         run: python india-racing-cycles/automation/agent.py
-      - name: Publish updated data files
+      - name: Create monthly report
+        if: github.event.schedule == '0 3 1 * *' || github.event_name == 'workflow_dispatch'
+        env:
+          GEMINI_API_KEY: \${{ secrets.GEMINI_API_KEY }}
+        run: python india-racing-cycles/automation/monthly_report.py
+      - name: Escalate pending review items
+        env:
+          GH_TOKEN: \${{ github.token }}
+        run: |
+          PENDING=$(python -c "import json; print(len(json.load(open('india-racing-cycles/data/review-queue.json', encoding='utf-8')).get('items', [])))")
+          if [ "$PENDING" -gt 0 ]; then
+            EXISTING=$(gh issue list --state open --search "IRC review queue" --json number --jq '.[0].number // empty')
+            if [ -z "$EXISTING" ]; then
+              gh issue create \
+                --title "Review required: India Racing Cycles source updates" \
+                --body "The daily collector has $PENDING candidate item(s) that could not be verified to the automatic publishing threshold. Please inspect india-racing-cycles/data/review-queue.json, verify the organiser source, then update or remove each item. This issue is created only when review is needed."
+            fi
+          fi
+      - name: Publish updated data and reports
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add india-racing-cycles/data/events.json india-racing-cycles/data/news.json india-racing-cycles/data/review-queue.json
+          git add india-racing-cycles/data/events.json india-racing-cycles/data/news.json india-racing-cycles/data/review-queue.json india-racing-cycles/reports
           if ! git diff --cached --quiet; then
             git commit -m "chore(irc): daily cycling calendar and news refresh"
             git push
