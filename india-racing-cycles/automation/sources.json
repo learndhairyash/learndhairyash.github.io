@@ -44,6 +44,21 @@
       "name": "Race Across India RAIN 3.0 event page",
       "url": "https://raceacrossindia.org/rain-3-0/",
       "kind": "official"
+    },
+    {
+      "name": "Cycling Association of Maharashtra",
+      "url": "https://www.cyclingassociationofmaharashtra.com/",
+      "kind": "official"
+    },
+    {
+      "name": "Inspire India",
+      "url": "https://www.inspireindia.net.in/",
+      "kind": "official"
+    },
+    {
+      "name": "Bangalore Bicycle Championships",
+      "url": "https://www.bbch.in/",
+      "kind": "official"
     }
   ],
   "rss_feeds": [
@@ -61,6 +76,9 @@
     "odishacyclingassociation.in",
     "punegrandtour.in",
     "tourofthekkady.com",
-    "raceacrossindia.org"
+    "raceacrossindia.org",
+    "cyclingassociationofmaharashtra.com",
+    "inspireindia.net.in",
+    "bbch.in"
   ]
 }
