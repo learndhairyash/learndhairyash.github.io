@@ -29,7 +29,7 @@ def main():
     news=load("news.json",{}).get("news",[])
     review=load("review-queue.json",{}).get("items",[])
     upcoming=[e for e in events if e.get("start_date","")>=TODAY.isoformat() and e.get("status") not in ("cancelled","completed")]
-    completed=[e for e in events if e.get("status")=="completed" or (e.get("end_date") or e.get("start_date",""))<TODAY.isoformat()]
+    completed=[e for e in events if e.get("status")=="completed" or (e.get("end_date") and e.get("end_date")<TODAY.isoformat())]
     cancelled=[e for e in events if e.get("status")=="cancelled"]
     postponed=[e for e in events if e.get("status")=="postponed"]
     period_news=[n for n in news if start.isoformat()<=n.get("published_at","")<=end.isoformat()]
