@@ -48,7 +48,7 @@ jobs:
             if [ -z "$EXISTING" ]; then
               gh issue create \
                 --title "Review required: India Racing Cycles source updates" \
-                --body "The daily collector has $PENDING candidate item(s) that could not be verified to the automatic publishing threshold. Please inspect india-racing-cycles/data/review-queue.json, verify the organiser source, then update or remove each item. This issue is created only when review is needed."
+                --body "IRC review queue: the daily collector has $PENDING candidate item(s) that could not be verified to the automatic publishing threshold. Please inspect india-racing-cycles/data/review-queue.json, verify the organiser source, then update or remove each item. This issue is created only when review is needed."
             fi
           fi
       - name: Publish updated data and reports
