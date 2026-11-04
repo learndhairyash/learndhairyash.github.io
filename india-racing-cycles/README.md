@@ -11,11 +11,12 @@ Once the existing GitHub Pages site serves the repository's `main` branch, the s
 `https://learndhairyash.github.io/india-racing-cycles/`
 
 Pages:
-- `index.html` — upcoming events
+- `index.html` — upcoming events in a single chronological list (nearest date first)
 - `past.html` — searchable event archive
 - `news.html` — cycling news and announcements
+- `suggest-event.html` — public community form for sending event tips for manual review
 
-The site uses plain HTML, CSS and JavaScript. No build step or frontend framework is required. Event and news cards are loaded from `data/events.json` and `data/news.json`. The browser can optionally use a Cloudflare Worker API by setting `window.IRC_CONFIG.apiBase` in the page HTML.
+The site uses plain HTML, CSS and JavaScript. No build step or frontend framework is required. The event calendar is rendered as one list, sorted by start date with the nearest event first. The Where We Look directory is a single-column list of cycling sources and public social-platform entry points. Event and news cards are loaded from `data/events.json` and `data/news.json`. The browser can optionally use a Cloudflare Worker API by setting `window.IRC_CONFIG.apiBase` in the page HTML.
 
 ## Launch dataset
 
@@ -35,6 +36,21 @@ Two past-event entries are clearly labelled as transcribed from the community-ad
 - Dark/light theme preference.
 - Honest poster placeholders when an original poster URL was not confirmed.
 - Newsletter form correctly reports that it is not connected until a backend URL is configured. It does not claim to subscribe people without sending a confirmation email.
+
+## Community event suggestions
+
+The fourth page, suggest-event.html, lets visitors send any information they have: an event name, public Facebook/Instagram or organiser link, date, city, cycling category, organiser, poster/image URL, free-text notes and optional contact details. Most fields are optional; at least one useful event clue is required.
+
+Suggestions are saved as pending in the Cloudflare D1 event_suggestions table. They are NOT published automatically. The administrator checks the source and manually adds approved events to data/events.json. The form is deliberately transparent when its backend is not connected: it will not claim that a suggestion was sent when no server URL has been configured.
+
+Optional admin notification: set the Worker secret ADMIN_EMAIL to the address that should receive new suggestion notices. The Worker stores the suggestion first; an email notification failure does not delete the suggestion.
+
+Manual review:
+- List pending suggestions using GET /api/admin/event-suggestions with Authorization: Bearer ADMIN_API_TOKEN.
+- Update a suggestion using PATCH /api/admin/event-suggestions/{id} with JSON such as {"status":"reviewed","review_note":"Checked organiser page"}. Allowed statuses are reviewed, added and rejected.
+- Or inspect directly in D1 with Wrangler:
+  npx wrangler d1 execute india-racing-cycles --remote --command "SELECT id, created_at, payload_json FROM event_suggestions WHERE status='pending' ORDER BY created_at DESC;"
+- After checking a suggestion, manually update data/events.json and commit it. Update the suggestion status so the pending queue stays clear.
 
 ## Daily collection automation
 
@@ -70,11 +86,11 @@ The Worker source is in `worker/`. It provides:
 3. Copy its database ID into `worker/wrangler.toml`.
 4. Run `wrangler d1 execute india-racing-cycles --remote --file worker/schema.sql`.
 5. From the `india-racing-cycles/worker` folder, run `wrangler deploy`.
-6. Set Worker secrets: `wrangler secret put RESEND_API_KEY`, `wrangler secret put FROM_EMAIL`, `wrangler secret put SITE_URL`, and `wrangler secret put ADMIN_API_TOKEN`.
+6. Set Worker secrets: `wrangler secret put RESEND_API_KEY`, `wrangler secret put FROM_EMAIL`, `wrangler secret put SITE_URL`, and `wrangler secret put ADMIN_API_TOKEN`. Also set `wrangler secret put ADMIN_EMAIL` for new event suggestion notifications.
 7. Set `window.IRC_CONFIG.apiBase` in each HTML page to the deployed Worker URL.
 8. Configure the Worker route/allowed origin for the GitHub Pages site and test confirmation and unsubscribe from a real mailbox.
 
-The database ID and secrets are intentionally blank/not committed. Do not put API keys in frontend JavaScript or this public repository.
+The database ID and secrets are intentionally blank/not committed. Re-run the schema migration after updating this project: `wrangler d1 execute india-racing-cycles --remote --file worker/schema.sql`. Do not put API keys in frontend JavaScript or this public repository.
 
 ## Newsletter and monthly report
 
