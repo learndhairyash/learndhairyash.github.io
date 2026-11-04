@@ -39,6 +39,11 @@
       "name": "Race Across India",
       "url": "https://raceacrossindia.org/",
       "kind": "official"
+    },
+    {
+      "name": "Race Across India RAIN 3.0 event page",
+      "url": "https://raceacrossindia.org/rain-3-0/",
+      "kind": "official"
     }
   ],
   "rss_feeds": [
