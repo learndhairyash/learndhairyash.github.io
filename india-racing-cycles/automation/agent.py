@@ -165,8 +165,8 @@ def valid_candidate(item, known_sources):
         return False
     try:
         start = date.fromisoformat(item.get("start_date", ""))
-        end = date.fromisoformat(item.get("end_date") or item.get("start_date", ""))
-        if end < start:
+        end_value = item.get("end_date")
+        if end_value and date.fromisoformat(end_value) < start:
             return False
     except ValueError:
         return False
@@ -223,9 +223,10 @@ def main():
 
     # Move completed events to the archive state on the day after their final date.
     for event in events:
-        end_value = event.get("end_date") or event.get("start_date")
+        end_value = event.get("end_date")
         try:
-            if date.fromisoformat(end_value) < TODAY and event.get("status") not in ("cancelled", "postponed"):
+            # Do not guess the finish date for multi-day/ultra events.
+            if end_value and date.fromisoformat(end_value) < TODAY and event.get("status") not in ("cancelled", "postponed"):
                 event["status"] = "completed"
         except (TypeError, ValueError):
             continue
