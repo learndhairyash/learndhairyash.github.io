@@ -31,16 +31,16 @@ jobs:
         run: pip install -r india-racing-cycles/automation/requirements.txt
       - name: Research public cycling sources
         env:
-          GEMINI_API_KEY: \${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python india-racing-cycles/automation/agent.py
       - name: Create monthly report
         if: github.event.schedule == '0 3 1 * *' || github.event_name == 'workflow_dispatch'
         env:
-          GEMINI_API_KEY: \${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python india-racing-cycles/automation/monthly_report.py
       - name: Escalate pending review items
         env:
-          GH_TOKEN: \${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           PENDING=$(python -c "import json; print(len(json.load(open('india-racing-cycles/data/review-queue.json', encoding='utf-8')).get('items', [])))")
           if [ "$PENDING" -gt 0 ]; then
