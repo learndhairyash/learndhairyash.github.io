@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3fb">
+  <meta name="description" content="Discover cycling races, events and competitions across India. India Racing Cycles — Discover, Share, Race.">
+  <title>Upcoming Cycling Events | India Racing Cycles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>window.IRC_CONFIG = { apiBase: "" };</script>
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body data-page="upcoming">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html" aria-label="India Racing Cycles home">
+        <span class="brand-mark" aria-hidden="true"><span class="material-symbols-rounded">pedal_bike</span></span>
+        <span class="brand-copy"><strong>INDIA RACING CYCLES</strong><small>DISCOVER <i>|</i> SHARE <i>|</i> RACE</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="index.html" aria-current="page">Upcoming Events</a>
+        <a class="nav-link" href="past.html">Past Events</a>
+        <a class="nav-link" href="news.html">Cycling News</a>
+      </nav>
+      <div class="top-actions">
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch colour theme" title="Switch colour theme"><span class="material-symbols-rounded">dark_mode</span></button>
+        <a class="button button-tonal button-small" href="#newsletter"><span class="material-symbols-rounded">mail</span> Newsletter</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="material-symbols-rounded">flag</span> THE INDIAN CYCLING CALENDAR</p>
+        <h1>Find your next<br><span class="headline-accent">starting line.</span></h1>
+        <p class="hero-lead">One place to discover road races, MTB events, track competitions, gran fondos and cycling challenges happening across India.</p>
+        <div class="hero-actions">
+          <a class="button button-filled" href="#events">Explore events <span class="material-symbols-rounded">arrow_downward</span></a>
+          <a class="button button-outline" href="news.html">Latest cycling news</a>
+        </div>
+        <p class="hero-footnote"><span class="material-symbols-rounded">verified_user</span> Event details link back to their original sources.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <span class="material-symbols-rounded hero-bike">pedal_bike</span>
+        <div class="hero-art-label"><b>INDIA</b><span>ON TWO WHEELS</span></div>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Website information">
+      <div class="stat"><strong id="upcoming-count">—</strong><span>Upcoming events</span></div>
+      <div class="stat"><strong id="state-count">All India</strong><span>Events across states</span></div>
+      <div class="stat"><strong id="updated-date">—</strong><span>Last data refresh</span></div>
+    </section>
+
+    <section class="section" id="events">
+      <div class="section-heading">
+        <div><p class="eyebrow">PLAN YOUR NEXT RACE</p><h2>Upcoming events</h2><p class="section-description">Browse confirmed event details and open the organiser's page for the latest instructions.</p></div>
+        <span class="live-pill"><span></span> Event calendar</span>
+      </div>
+      <div class="filter-panel">
+        <label class="search-box"><span class="material-symbols-rounded">search</span><input id="event-search" type="search" placeholder="Search event, city or organiser" autocomplete="off"><kbd>/</kbd></label>
+        <label class="select-wrap"><span class="sr-only">Cycling category</span><select id="category-filter"><option value="">All categories</option><option>Road</option><option>MTB</option><option>Track</option><option>Gran Fondo</option><option>Cyclocross</option><option>Other</option></select><span class="material-symbols-rounded">expand_more</span></label>
+        <label class="select-wrap"><span class="sr-only">State</span><select id="state-filter"><option value="">All states</option></select><span class="material-symbols-rounded">expand_more</span></label>
+      </div>
+      <div id="event-grid" class="event-grid" aria-live="polite"><div class="loading-card">Loading the cycling calendar…</div></div>
+      <p id="event-error" class="inline-note" hidden></p>
+    </section>
+
+    <section class="notice-band">
+      <div class="notice-icon"><span class="material-symbols-rounded">campaign</span></div>
+      <div><h3>Know about a race we missed?</h3><p>Help the cycling community find it. Share the organiser's public event page or announcement with the community admin.</p></div>
+      <a class="button button-tonal" href="https://www.facebook.com/" target="_blank" rel="noopener">Open Facebook <span class="material-symbols-rounded">open_in_new</span></a>
+    </section>
+
+    <section class="section sources-section">
+      <div class="section-heading"><div><p class="eyebrow">FOLLOW THE ORIGINAL SOURCE</p><h2>Where we look</h2><p class="section-description">We prioritise official cycling bodies, event organisers and specialist cycling publishers.</p></div></div>
+      <div class="source-grid">
+        <a class="source-card" href="https://www.cfiindia.in/" target="_blank" rel="noopener"><span class="source-icon">CFI</span><span><b>Cycling Federation of India</b><small>National body · Calendar and notices</small></span><span class="material-symbols-rounded">open_in_new</span></a>
+        <a class="source-card" href="https://odishacyclingassociation.in/events/" target="_blank" rel="noopener"><span class="source-icon">OCA</span><span><b>Odisha Cycling Association</b><small>State association · Events</small></span><span class="material-symbols-rounded">open_in_new</span></a>
+        <a class="source-card" href="https://punegrandtour.in/" target="_blank" rel="noopener"><span class="source-icon">PGT</span><span><b>Bajaj Pune Grand Tour</b><small>Official event website</small></span><span class="material-symbols-rounded">open_in_new</span></a>
+        <a class="source-card" href="https://www.tourofthekkady.com/" target="_blank" rel="noopener"><span class="source-icon">TOT</span><span><b>Tour of Thekkady</b><small>Official event website</small></span><span class="material-symbols-rounded">open_in_new</span></a>
+      </div>
+    </section>
+
+    <section class="newsletter-section" id="newsletter">
+      <div class="newsletter-copy"><p class="eyebrow">STAY IN THE RACE</p><h2>Useful updates.<br>Never miss a start.</h2><p>Get new event announcements and important date or status changes in your inbox.</p></div>
+      <form id="newsletter-form" class="newsletter-form">
+        <label for="newsletter-email">Email address</label>
+        <div class="email-field"><input id="newsletter-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required><button class="button button-filled" type="submit">Subscribe <span class="material-symbols-rounded">arrow_forward</span></button></div>
+        <label class="consent"><input type="checkbox" required> I agree to receive India Racing Cycles email updates. I can unsubscribe at any time.</label>
+        <p id="newsletter-message" class="form-message" role="status">Email confirmation will be required before subscription is activated.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="index.html"><span class="brand-mark"><span class="material-symbols-rounded">pedal_bike</span></span><span class="brand-copy"><strong>INDIA RACING CYCLES</strong><small>DISCOVER <i>|</i> SHARE <i>|</i> RACE</small></span></a>
+    <p>Built for the people who race, ride, organise and cheer.</p>
+    <div class="footer-links"><a href="past.html">Past events</a><a href="news.html">Cycling news</a><a href="https://www.cfiindia.in/" target="_blank" rel="noopener">CFI</a><a href="https://indiancyclingnews.com/" target="_blank" rel="noopener">Indian Cycling News</a></div>
+    <small>Independent community calendar. Always confirm final details with the organiser.</small>
+  </footer>
+</body>
+</html>
