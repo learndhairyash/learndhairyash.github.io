@@ -1,27 +1,61 @@
 {
   "source_pages": [
-    {"name":"Cycling Federation of India","url":"https://www.cfiindia.in/","kind":"official"},
-    {"name":"CFI Events Calendar","url":"https://www.cfiindia.in/about-3","kind":"official"},
-    {"name":"Odisha Cycling Association Events","url":"https://odishacyclingassociation.in/events/","kind":"official"},
-    {"name":"Bajaj Pune Grand Tour","url":"https://punegrandtour.in/","kind":"official"},
-    {"name":"Tour of Thekkady","url":"https://www.tourofthekkady.com/","kind":"official"},
-    {"name":"Indian Cycling News","url":"https://indiancyclingnews.com/","kind":"publisher"},
-    {"name":"Orisports","url":"https://www.orisports.com/","kind":"publisher"}
+    {
+      "name": "Cycling Federation of India",
+      "url": "https://www.cfiindia.in/",
+      "kind": "official"
+    },
+    {
+      "name": "CFI Events Calendar",
+      "url": "https://www.cfiindia.in/about-3",
+      "kind": "official"
+    },
+    {
+      "name": "Odisha Cycling Association Events",
+      "url": "https://odishacyclingassociation.in/events/",
+      "kind": "official"
+    },
+    {
+      "name": "Bajaj Pune Grand Tour",
+      "url": "https://punegrandtour.in/",
+      "kind": "official"
+    },
+    {
+      "name": "Tour of Thekkady",
+      "url": "https://www.tourofthekkady.com/",
+      "kind": "official"
+    },
+    {
+      "name": "Indian Cycling News",
+      "url": "https://indiancyclingnews.com/",
+      "kind": "publisher"
+    },
+    {
+      "name": "Orisports",
+      "url": "https://www.orisports.com/",
+      "kind": "publisher"
+    },
+    {
+      "name": "Race Across India",
+      "url": "https://raceacrossindia.org/",
+      "kind": "official"
+    }
   ],
   "rss_feeds": [
     {
-      "name":"Google News — Indian cycling races",
-      "url":"https://news.google.com/rss/search?q=India+cycling+race+OR+cyclothon+OR+MTB+OR+cycling+championship&hl=en-IN&gl=IN&ceid=IN:en"
+      "name": "Google News — Indian cycling races",
+      "url": "https://news.google.com/rss/search?q=India+cycling+race+OR+cyclothon+OR+MTB+OR+cycling+championship&hl=en-IN&gl=IN&ceid=IN:en"
     },
     {
-      "name":"Google News — Indian cycling announcements and results",
-      "url":"https://news.google.com/rss/search?q=Indian+cycling+event+announcement+OR+cycling+results+India&hl=en-IN&gl=IN&ceid=IN:en"
+      "name": "Google News — Indian cycling announcements and results",
+      "url": "https://news.google.com/rss/search?q=Indian+cycling+event+announcement+OR+cycling+results+India&hl=en-IN&gl=IN&ceid=IN:en"
     }
   ],
   "approved_official_domains": [
     "cfiindia.in",
     "odishacyclingassociation.in",
     "punegrandtour.in",
-    "tourofthekkady.com"
+    "tourofthekkady.com",
+    "raceacrossindia.org"
   ]
 }
