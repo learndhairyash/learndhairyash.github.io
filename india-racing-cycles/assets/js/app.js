@@ -55,7 +55,53 @@
     function render(){const q=$("news-search").value.trim().toLowerCase(),type=$("news-type-filter").value;const list=items.filter(n=>(!q||[n.title,n.publisher,n.summary].join(" ").toLowerCase().includes(q))&&(!type||n.type===type)).sort((a,b)=>(b.published_at||"").localeCompare(a.published_at||""));grid.innerHTML=list.length?list.map(n=>'<article class="news-card"><div class="news-card-top"><span class="news-category">'+safe(n.category||"Cycling update")+'</span><time datetime="'+safe(n.published_at||"")+'">'+safe(fmt(n.published_at))+'</time></div><h3>'+safe(n.title)+'</h3><p class="news-source">Published by '+safe(n.publisher||"Original source")+'</p><p class="news-description">'+safe(n.summary||"Open the original article for the full update.")+'</p><a class="news-link" href="'+safeUrl(n.source_url)+'" target="_blank" rel="noopener">Read original report <span class="material-symbols-rounded">arrow_outward</span></a></article>').join(""):empty("No matching stories","New race news and announcements will appear here as sources are reviewed.","newspaper");}
     ["news-search","news-type-filter"].forEach(id=>$(id).addEventListener(id==="news-search"?"input":"change",render));
   }
+
+  function suggestionForm(){
+    const form=$("event-suggestion-form");
+    if(!form)return;
+    form.addEventListener("submit",async ev=>{
+      ev.preventDefault();
+      const msg=$("suggestion-message");
+      const submit=form.querySelector('button[type="submit"]');
+      const data=Object.fromEntries(new FormData(form).entries());
+      const useful=["event_name","source_url","event_date","location","category","organiser","poster_url","details"];
+      if(!useful.some(key=>String(data[key]||"").trim())){
+        msg.textContent="Please share at least one event detail or source link so we know what to review.";
+        msg.className="form-message form-message-dark error";
+        return;
+      }
+      for(const key of ["source_url","poster_url"]){
+        if(String(data[key]||"").trim()){
+          try{const u=new URL(data[key]);if(!["https:","http:"].includes(u.protocol))throw new Error();}
+          catch{msg.textContent="Please enter a valid public web link for the event or poster.";msg.className="form-message form-message-dark error";return;}
+        }
+      }
+      if(!base){
+        msg.textContent="The suggestion page is ready, but its secure submission service has not been connected yet. Your details have not been sent. The site administrator must finish the Cloudflare setup first.";
+        msg.className="form-message form-message-dark error";
+        return;
+      }
+      msg.textContent="Sending your suggestion…";
+      msg.className="form-message form-message-dark";
+      submit.disabled=true;
+      try{
+        const r=await fetch(base+"/api/event-suggestions",{
+          method:"POST",
+          headers:{"Content-Type":"application/json",Accept:"application/json"},
+          body:JSON.stringify(data)
+        });
+        const result=await r.json();
+        if(!r.ok)throw new Error(result.error||"Your suggestion could not be sent. Please try again.");
+        msg.textContent="Thank you! Your event suggestion has been received and is waiting for manual review. It will not appear on the calendar until it has been checked.";
+        msg.className="form-message form-message-dark success";
+        form.reset();
+      }catch(error){
+        msg.textContent=error.message||"Your suggestion could not be sent. Please try again later.";
+        msg.className="form-message form-message-dark error";
+      }finally{submit.disabled=false;}
+    });
+  }
   function newsletter(){
     const form=$("newsletter-form");if(!form)return;form.addEventListener("submit",async ev=>{ev.preventDefault();const msg=$("newsletter-message"),email=$("newsletter-email").value.trim();if(!base){msg.textContent="Newsletter sign-up is not connected yet. The email service needs to be configured before subscriptions can be accepted.";msg.className="form-message error";return;}msg.textContent="Sending confirmation…";msg.className="form-message";try{const r=await fetch(base+"/api/subscribe",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email})});const data=await r.json();if(!r.ok)throw new Error(data.error||"Could not subscribe");msg.textContent="Check your inbox for a confirmation link. Your subscription is not active until you confirm.";msg.className="form-message success";form.reset();}catch(err){msg.textContent=err.message;msg.className="form-message error";}});}
-  setTheme();newsletter();const page=document.body.dataset.page;if(page==="upcoming")initUpcoming();if(page==="past")initPast();if(page==="news")initNews();
+  setTheme();newsletter();const page=document.body.dataset.page;if(page==="upcoming")initUpcoming();if(page==="past")initPast();if(page==="news")initNews();if(page==="suggestion")suggestionForm();
 })();
