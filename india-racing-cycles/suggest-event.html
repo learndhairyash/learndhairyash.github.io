@@ -66,11 +66,15 @@
         <label class="field-label" for="suggest-url">Event or social media link <span>Optional</span></label>
         <input class="text-field" id="suggest-url" name="source_url" type="url" maxlength="1000" placeholder="https://www.instagram.com/... or event website">
         <small class="field-hint">Paste the public post, event page, registration page or organiser profile URL.</small>
+        <label class="field-label" for="suggest-platform">Where did you find it? <span>Optional</span></label>
+        <select class="text-field" id="suggest-platform" name="source_platform"><option value="">Not sure / other</option><option>Instagram</option><option>Facebook</option><option>LinkedIn</option><option>BookMyShow</option><option>Official event website</option><option>WhatsApp or message</option><option>Poster / photograph</option><option>Other</option></select>
 
         <div class="field-pair">
-          <div><label class="field-label" for="suggest-date">Event date <span>Optional</span></label><input class="text-field" id="suggest-date" name="event_date" type="date"></div>
-          <div><label class="field-label" for="suggest-location">City / location <span>Optional</span></label><input class="text-field" id="suggest-location" name="location" type="text" maxlength="180" placeholder="e.g. Pune, Maharashtra"></div>
+          <div><label class="field-label" for="suggest-date">Event start date <span>Optional</span></label><input class="text-field" id="suggest-date" name="event_date" type="date"></div>
+          <div><label class="field-label" for="suggest-end-date">Event end date <span>Optional</span></label><input class="text-field" id="suggest-end-date" name="event_date_end" type="date"></div>
         </div>
+        <label class="field-label" for="suggest-location">City / location <span>Optional</span></label>
+        <input class="text-field" id="suggest-location" name="location" type="text" maxlength="180" placeholder="e.g. Pune, Maharashtra">
 
         <div class="field-pair">
           <div><label class="field-label" for="suggest-category">Cycling category <span>Optional</span></label>
@@ -89,6 +93,10 @@
 
         <div class="form-divider"></div>
         <p class="eyebrow">YOUR DETAILS (OPTIONAL)</p>
+        <div class="field-pair">
+          <div><label class="field-label" for="suggest-organiser-phone">Organiser's mobile number</label><input class="text-field" id="suggest-organiser-phone" name="organiser_phone" type="tel" maxlength="40" placeholder="Optional contact number"></div>
+          <div><label class="field-label" for="suggest-organiser-email">Organiser's email</label><input class="text-field" id="suggest-organiser-email" name="organiser_email" type="email" maxlength="254" placeholder="Optional organiser email"></div>
+        </div>
         <div class="field-pair">
           <div><label class="field-label" for="suggest-name">Your name</label><input class="text-field" id="suggest-name" name="contributor_name" type="text" maxlength="100" autocomplete="name" placeholder="Name"></div>
           <div><label class="field-label" for="suggest-email">Your email</label><input class="text-field" id="suggest-email" name="contributor_email" type="email" maxlength="254" autocomplete="email" placeholder="you@example.com"></div>
