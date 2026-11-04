@@ -14,12 +14,12 @@
       "discipline": "Road",
       "categories": [
         "Road",
-        "UCI 2.1",
-        "Men Elite",
-        "Pro Men's Race"
+        "Men Elite · UCI 2.1",
+        "Pro Men's Race · UCI 2.2",
+        "Gran Fondo details TBC"
       ],
       "organiser": "Pune Grand Tour / Pune District",
-      "description": "Six-stage professional road race across Pune district. The official event website describes a UCI 2.1 race. Participation is through selected professional teams; Gran Fondo details were still to be confirmed on the official website when checked.",
+      "description": "Six-stage professional road race across Pune district, 26–31 January 2027. The official event site lists the Men Elite individual road race as UCI 2.1 (960.12 km), the Pro Men's Race as UCI 2.2 (437 km), and says Gran Fondo details are still to be confirmed. Professional team selection is handled by cycling bodies.",
       "registration_url": "",
       "contact_email": "registrations@punegrandtour.in",
       "contact_phone": "",
@@ -38,7 +38,9 @@
       ],
       "status": "confirmed",
       "verified_at": "2026-11-04",
-      "confidence": "high"
+      "confidence": "high",
+      "image_url": "https://punegrandtour.in/wp-content/uploads/2026/10/the-track-1.jpg",
+      "image_note": "Official event track visual from the organiser website; not a race poster."
     },
     {
       "id": "tour-of-thekkady-2027",
@@ -72,7 +74,9 @@
       ],
       "status": "confirmed",
       "verified_at": "2026-11-04",
-      "confidence": "high"
+      "confidence": "high",
+      "image_url": "https://static.wixstatic.com/media/2b39e5_fe127dddad77445dbf539db7cb0cfb8e~mv2.jpg/v1/fill/w_933%2Ch_622%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/2b39e5_fe127dddad77445dbf539db7cb0cfb8e~mv2.jpg",
+      "image_note": "Official organiser website image; not a standalone event poster."
     },
     {
       "id": "hcl-cyclothon-greater-noida-2026",
@@ -135,20 +139,25 @@
       "discipline": "Ultra-cycling",
       "categories": [
         "Ultra-cycling",
-        "3,758 km"
+        "Solo",
+        "Team of 2",
+        "Team of 4",
+        "4,100+ km"
       ],
       "organiser": "Race Across India",
-      "description": "The organiser's home page announces a 28 February 2027 start for its Srinagar-to-Kanyakumari ultra-cycling race (3,758 km). The event finish date is not stated on the page. The linked registration page still displays 2024-edition details, so current entry instructions have not been linked pending organiser confirmation.",
-      "registration_url": "",
+      "description": "RAIN 3.0 is announced for 28 February 2027 as a 4,100+ km north-to-south ultra-cycling race from Srinagar to Kanyakumari. The organiser's page lists solo and relay formats and different finish cut-offs. The page contains older 2025/2024 text in some sections, so confirm current fees and terms directly before registering.",
+      "registration_url": "https://raceacrossindia.org/rain-3-0/",
       "contact_email": "",
       "contact_phone": "",
       "poster_url": "",
       "poster_note": "No current-edition poster URL was confirmed on the organiser's home page.",
-      "source_url": "https://raceacrossindia.org/",
+      "source_url": "https://raceacrossindia.org/rain-3-0/",
       "source_links": [],
       "status": "confirmed",
       "verified_at": "2026-11-04",
-      "confidence": "high"
+      "confidence": "high",
+      "image_url": "https://raceacrossindia.org/wp-content/uploads/2024/05/route-for-race-across-india.jpg",
+      "image_note": "Official route-map image shown on the RAIN 3.0 page; check the current organiser route before travel."
     }
   ]
 }
