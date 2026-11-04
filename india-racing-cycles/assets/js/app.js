@@ -64,7 +64,7 @@
       const msg=$("suggestion-message");
       const submit=form.querySelector('button[type="submit"]');
       const data=Object.fromEntries(new FormData(form).entries());
-      const useful=["event_name","source_url","event_date","location","category","organiser","poster_url","details"];
+      const useful=["event_name","source_url","event_date","event_date_end","location","category","organiser","organiser_phone","organiser_email","poster_url","details"];
       if(!useful.some(key=>String(data[key]||"").trim())){
         msg.textContent="Please share at least one event detail or source link so we know what to review.";
         msg.className="form-message form-message-dark error";
@@ -75,6 +75,11 @@
           try{const u=new URL(data[key]);if(!["https:","http:"].includes(u.protocol))throw new Error();}
           catch{msg.textContent="Please enter a valid public web link for the event or poster.";msg.className="form-message form-message-dark error";return;}
         }
+      }
+      if(data.event_date && data.event_date_end && data.event_date_end < data.event_date){
+        msg.textContent="The event end date cannot be before its start date.";
+        msg.className="form-message form-message-dark error";
+        return;
       }
       if(!base){
         msg.textContent="The suggestion page is ready, but its secure submission service has not been connected yet. Your details have not been sent. The site administrator must finish the Cloudflare setup first.";
