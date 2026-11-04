@@ -12,7 +12,12 @@
       "location": "Pune district, Maharashtra",
       "state": "Maharashtra",
       "discipline": "Road",
-      "categories": ["Road", "UCI 2.1", "Men Elite", "Pro Men's Race"],
+      "categories": [
+        "Road",
+        "UCI 2.1",
+        "Men Elite",
+        "Pro Men's Race"
+      ],
       "organiser": "Pune Grand Tour / Pune District",
       "description": "Six-stage professional road race across Pune district. The official event website describes a UCI 2.1 race. Participation is through selected professional teams; Gran Fondo details were still to be confirmed on the official website when checked.",
       "registration_url": "",
@@ -21,7 +26,16 @@
       "poster_url": "",
       "poster_note": "No standalone poster URL was available on the official event page checked.",
       "source_url": "https://punegrandtour.in/",
-      "source_links": [{"label":"Official schedule","url":"https://punegrandtour.in/schedule/"},{"label":"Official contact","url":"https://punegrandtour.in/contact/"}],
+      "source_links": [
+        {
+          "label": "Official schedule",
+          "url": "https://punegrandtour.in/schedule/"
+        },
+        {
+          "label": "Official contact",
+          "url": "https://punegrandtour.in/contact/"
+        }
+      ],
       "status": "confirmed",
       "verified_at": "2026-11-04",
       "confidence": "high"
@@ -34,7 +48,14 @@
       "location": "Start: Caesar Palace Hotel, Nagampadom, Kottayam · Finish: Thekkady, Kerala",
       "state": "Kerala",
       "discipline": "Gran Fondo",
-      "categories": ["Gran Fondo", "152 km race", "167 km tour", "Men", "Women", "Masters"],
+      "categories": [
+        "Gran Fondo",
+        "152 km race",
+        "167 km tour",
+        "Men",
+        "Women",
+        "Masters"
+      ],
       "organiser": "KEG Bikers",
       "description": "Sixth edition of the endurance cycling event. The organiser lists a 152 km race and a 167 km tour. Race categories include Men, Women and Masters; check the official terms for eligibility and cut-off times.",
       "registration_url": "https://www.novarace.in/events/tour-of-thekkady-2027",
@@ -43,7 +64,12 @@
       "poster_url": "",
       "poster_note": "The organiser page was available, but a direct poster image URL was not confirmed.",
       "source_url": "https://www.tourofthekkady.com/",
-      "source_links": [{"label":"Official event details","url":"https://www.tourofthekkady.com/termsandconditions"}],
+      "source_links": [
+        {
+          "label": "Official event details",
+          "url": "https://www.tourofthekkady.com/termsandconditions"
+        }
+      ],
       "status": "confirmed",
       "verified_at": "2026-11-04",
       "confidence": "high"
@@ -56,7 +82,10 @@
       "location": "Gaur City Mall, Greater Noida, Uttar Pradesh",
       "state": "Uttar Pradesh",
       "discipline": "Road",
-      "categories": ["Cyclothon", "Road"],
+      "categories": [
+        "Cyclothon",
+        "Road"
+      ],
       "organiser": "As shown in the community-supplied event poster",
       "description": "Historical entry transcribed from the India Racing Cycles Facebook group screenshot supplied by the community admin. The poster shows 15 March 2026 and Gaur City Mall, Greater Noida. The original post URL was not present in the screenshot.",
       "registration_url": "",
@@ -78,7 +107,11 @@
       "location": "Mahendragiri Hills, Odisha",
       "state": "Odisha",
       "discipline": "MTB",
-      "categories": ["MTB", "State Championship", "Women's MTB League"],
+      "categories": [
+        "MTB",
+        "State Championship",
+        "Women's MTB League"
+      ],
       "organiser": "Odisha Cycling Association (as shown on the supplied group screenshot)",
       "description": "Historical entry transcribed from the event poster visible in the community-admin screenshot. Dates and location are reproduced as displayed; the original announcement URL was not captured.",
       "registration_url": "",
@@ -91,6 +124,31 @@
       "status": "completed",
       "verified_at": "2026-11-04",
       "confidence": "community-screenshot"
+    },
+    {
+      "id": "race-across-india-2027",
+      "title": "Race Across India 2027",
+      "start_date": "2027-02-28",
+      "end_date": "2027-02-28",
+      "location": "Srinagar to Kanyakumari, India",
+      "state": "India",
+      "discipline": "Ultra-cycling",
+      "categories": [
+        "Ultra-cycling",
+        "3,758 km"
+      ],
+      "organiser": "Race Across India",
+      "description": "The organiser's home page announces a 28 February 2027 start for its Srinagar-to-Kanyakumari ultra-cycling race (3,758 km). The linked registration page still displays 2024-edition details, so current entry instructions have not been linked pending organiser confirmation.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No current-edition poster URL was confirmed on the organiser's home page.",
+      "source_url": "https://raceacrossindia.org/",
+      "source_links": [],
+      "status": "confirmed",
+      "verified_at": "2026-11-04",
+      "confidence": "high"
     }
   ]
 }
