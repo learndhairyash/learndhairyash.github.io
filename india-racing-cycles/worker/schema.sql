@@ -49,3 +49,16 @@ CREATE TABLE IF NOT EXISTS newsletter_log (
   failed_count INTEGER NOT NULL,
   sent_at TEXT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS event_suggestions (
+  id TEXT PRIMARY KEY,
+  status TEXT NOT NULL DEFAULT 'pending'
+    CHECK (status IN ('pending', 'reviewed', 'added', 'rejected')),
+  payload_json TEXT NOT NULL,
+  created_at TEXT NOT NULL,
+  updated_at TEXT NOT NULL,
+  review_note TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_event_suggestions_status_created
+  ON event_suggestions(status, created_at DESC);
