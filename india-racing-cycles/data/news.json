@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "last_updated": "2026-11-04",
+    "note": "Initial launch story. The original article is linked; open it for full context."
+  },
+  "news": [
+    {
+      "id": "pune-grand-tour-uci-21-upgrade-2026",
+      "title": "Pune Grand Tour earns UCI 2.1 upgrade ahead of its 2027 edition",
+      "published_at": "2026-10-08",
+      "publisher": "Indian Cycling News",
+      "category": "Race news",
+      "type": "race",
+      "summary": "Indian Cycling News reported that the Pune Grand Tour had been upgraded to UCI 2.1 status ahead of its 26–31 January 2027 edition. The official event website also lists the 2027 race as UCI Stage 2.1.",
+      "source_url": "https://indiancyclingnews.com/pune-grand-tour-earns-uci-2-1-upgrade-setting-stage-for-indias-cycling-future/",
+      "related_event_id": "bajaj-pune-grand-tour-2027",
+      "verified_at": "2026-11-04"
+    }
+  ]
+}
