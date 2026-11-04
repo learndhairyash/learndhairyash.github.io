@@ -19,11 +19,12 @@ The site uses plain HTML, CSS and JavaScript. No build step or frontend framewor
 
 ## Launch dataset
 
-Two upcoming events were checked against their official event pages on 4 November 2026:
+Three upcoming events were checked against their official event pages on 4 November 2026:
 - Bajaj Pune Grand Tour 2027 — 26–31 January 2027. Official website: https://punegrandtour.in/
 - Tour of Thekkady 2027 — 30 January 2027. Official website: https://www.tourofthekkady.com/ and registration: https://www.novarace.in/events/tour-of-thekkady-2027
+- Race Across India 3.0 — starts 28 February 2027, 4,100+ km from Srinagar to Kanyakumari. The organiser's page includes a registration form, but some text on the page refers to older editions; riders should confirm current fees and terms before registering: https://raceacrossindia.org/rain-3-0/
 
-Two past-event entries are clearly labelled as transcribed from the community-admin PDF screenshots. Their original post URLs were not visible in the supplied screenshots. The website does not pretend those missing links exist.
+Two past-event entries are clearly labelled as transcribed from the community-admin PDF screenshots. Their original post URLs were not visible in the supplied screenshots. The website does not pretend those missing links exist. Official event-page visuals are shown as previews where available; they are not labelled as posters unless a true poster URL is confirmed.
 
 ## What works in the static release
 
