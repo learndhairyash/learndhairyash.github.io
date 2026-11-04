@@ -7,7 +7,7 @@ function cors(request, env) {
   const allowOrigin = origin === allowed ? origin : allowed;
   return {
     "Access-Control-Allow-Origin": allowOrigin,
-    "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+    "Access-Control-Allow-Methods": "GET,POST,PATCH,OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type,Authorization",
     "Access-Control-Max-Age": "86400",
     "Vary": "Origin"
@@ -39,9 +39,9 @@ async function sendEmail(env, to, subject, html, textBody) {
   if (!response.ok) throw new Error(`Email provider returned ${response.status}.`);
   return response.json();
 }
-async function limitSignup(request, env) {
+async function limitSignup(request, env, purpose = "signup") {
   const ip = request.headers.get("CF-Connecting-IP") || "unknown";
-  const key = await sha256(ip);
+  const key = await sha256(purpose + ":" + ip);
   const cutoff = new Date(Date.now() - 60 * 60 * 1000).toISOString();
   const row = await env.DB.prepare("SELECT attempts, window_started_at FROM signup_attempts WHERE key_hash = ?").bind(key).first();
   if (!row || row.window_started_at < cutoff) {
@@ -98,6 +98,128 @@ async function handleUnsubscribe(url, env) {
   await env.DB.prepare("UPDATE subscribers SET status='unsubscribed', unsubscribed_at=?, confirm_token_hash=NULL WHERE email=?").bind(nowIso(), row.email).run();
   return htmlPage("Unsubscribed", "You have been removed from India Racing Cycles email updates.");
 }
+
+function cleanText(value, maxLength) {
+  return String(value ?? "").trim().slice(0, maxLength);
+}
+function publicUrl(value) {
+  const raw = cleanText(value, 1000);
+  if (!raw) return "";
+  try {
+    const parsed = new URL(raw);
+    if (!["https:", "http:"].includes(parsed.protocol)) return null;
+    return parsed.href;
+  } catch {
+    return null;
+  }
+}
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, character => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[character]));
+}
+async function handleEventSuggestion(request, env) {
+  const body = await request.json().catch(() => null);
+  if (!body || typeof body !== "object") return json({ error: "Please send the event information again." }, 400);
+  // Honeypot: bots receive a generic success response; no data is stored.
+  if (body.website) return json({ ok: true }, 202);
+  if (!await limitSignup(request, env, "event-suggestion")) {
+    return json({ error: "Too many submissions from this connection. Please try again later." }, 429);
+  }
+
+  const sourceUrl = publicUrl(body.source_url);
+  const posterUrl = publicUrl(body.poster_url);
+  if (sourceUrl === null || posterUrl === null) {
+    return json({ error: "Please use a valid public web link beginning with http:// or https://." }, 400);
+  }
+  const email = cleanText(body.contributor_email, 254).toLowerCase();
+  if (email && !validEmail(email)) return json({ error: "Please check the optional email address." }, 400);
+
+  const payload = {
+    event_name: cleanText(body.event_name, 180),
+    source_url: sourceUrl,
+    event_date: cleanText(body.event_date, 10),
+    location: cleanText(body.location, 180),
+    category: cleanText(body.category, 80),
+    organiser: cleanText(body.organiser, 180),
+    poster_url: posterUrl,
+    details: cleanText(body.details, 5000),
+    contributor_name: cleanText(body.contributor_name, 100),
+    contributor_email: email
+  };
+  if (payload.event_date && !/^\d{4}-\d{2}-\d{2}$/.test(payload.event_date)) {
+    return json({ error: "Please enter the event date in the date field, or leave it blank." }, 400);
+  }
+  const useful = ["event_name", "source_url", "event_date", "location", "category", "organiser", "poster_url", "details"];
+  if (!useful.some(key => payload[key])) {
+    return json({ error: "Please share at least one event detail or source link." }, 400);
+  }
+
+  const id = crypto.randomUUID();
+  const timestamp = nowIso();
+  await env.DB.prepare(
+    "INSERT INTO event_suggestions (id,status,payload_json,created_at,updated_at) VALUES (?,'pending',?,?,?)"
+  ).bind(id, JSON.stringify(payload), timestamp, timestamp).run();
+
+  // Optional email alert. Failure does not undo the stored suggestion.
+  let notificationSent = false;
+  if (env.ADMIN_EMAIL && env.RESEND_API_KEY && env.FROM_EMAIL) {
+    const lines = Object.entries(payload)
+      .filter(([, value]) => value)
+      .map(([key, value]) => "<p><strong>" + escapeHtml(key.replaceAll("_", " ")) + ":</strong> " + escapeHtml(value) + "</p>")
+      .join("");
+    const html = "<div style=\"font:15px/1.6 Arial,sans-serif\"><h2>New India Racing Cycles event suggestion</h2><p>Suggestion ID: " + escapeHtml(id) + "</p><p>Status: Pending manual review</p>" + lines + "</div>";
+    const textBody = "New suggestion " + id + "\n\n" + Object.entries(payload).filter(([,value])=>value).map(([key,value])=>key + ": " + value).join("\n");
+    try {
+      await sendEmail(env, env.ADMIN_EMAIL, "New cycling event suggestion — manual review needed", html, textBody);
+      notificationSent = true;
+    } catch (error) {
+      console.error("Suggestion stored, but admin notification failed:", error);
+    }
+  }
+  return json({ ok: true, id, status: "pending", notificationSent }, 202);
+}
+
+function isAdmin(request, env) {
+  return Boolean(env.ADMIN_API_TOKEN) &&
+    request.headers.get("Authorization") === "Bearer " + env.ADMIN_API_TOKEN;
+}
+async function handleAdminSuggestions(request, url, env) {
+  if (!isAdmin(request, env)) return json({ error: "Unauthorized." }, 401);
+  if (request.method === "GET" && url.pathname === "/api/admin/event-suggestions") {
+    const status = cleanText(url.searchParams.get("status") || "pending", 20);
+    if (!["pending", "reviewed", "added", "rejected", "all"].includes(status)) {
+      return json({ error: "Unknown status filter." }, 400);
+    }
+    const result = status === "all"
+      ? await env.DB.prepare("SELECT * FROM event_suggestions ORDER BY created_at DESC LIMIT 200").all()
+      : await env.DB.prepare("SELECT * FROM event_suggestions WHERE status=? ORDER BY created_at DESC LIMIT 200").bind(status).all();
+    return json({
+      suggestions: (result.results || []).map(row => ({
+        id: row.id, status: row.status, created_at: row.created_at,
+        updated_at: row.updated_at, review_note: row.review_note,
+        ...JSON.parse(row.payload_json)
+      }))
+    });
+  }
+  if (request.method === "PATCH") {
+    const match = url.pathname.match(/^\/api\/admin\/event-suggestions\/([a-f0-9-]{36})$/i);
+    if (!match) return json({ error: "Invalid suggestion ID." }, 400);
+    const body = await request.json().catch(() => ({}));
+    const status = cleanText(body.status, 20);
+    if (!["reviewed", "added", "rejected"].includes(status)) {
+      return json({ error: "Status must be reviewed, added or rejected." }, 400);
+    }
+    const note = cleanText(body.review_note, 1000);
+    const result = await env.DB.prepare(
+      "UPDATE event_suggestions SET status=?, updated_at=?, review_note=? WHERE id=?"
+    ).bind(status, nowIso(), note, match[1]).run();
+    if (!result.meta?.changes) return json({ error: "Suggestion not found." }, 404);
+    return json({ ok: true, id: match[1], status });
+  }
+  return json({ error: "Method not allowed." }, 405);
+}
+
 async function handleNewsletter(request, env) {
   if (!env.ADMIN_API_TOKEN || request.headers.get("Authorization") !== `Bearer ${env.ADMIN_API_TOKEN}`) return json({ error: "Unauthorized." }, 401);
   const body = await request.json().catch(() => ({}));
@@ -134,6 +256,14 @@ async function handle(request, env) {
   if (url.pathname === "/api/news" && request.method === "GET") {
     const rows = await env.DB.prepare("SELECT payload_json FROM news ORDER BY published_at DESC LIMIT 100").all();
     return json({ news: (rows.results || []).map(r => JSON.parse(r.payload_json)) }, 200, cors(request, env));
+  }
+  if (url.pathname === "/api/event-suggestions" && request.method === "POST") {
+    try { return await handleEventSuggestion(request, env); }
+    catch (e) { console.error("Event suggestion failed:", e); return json({ error: "The suggestion could not be stored. Please try again later." }, 502); }
+  }
+  if (url.pathname === "/api/admin/event-suggestions" || url.pathname.startsWith("/api/admin/event-suggestions/")) {
+    try { return await handleAdminSuggestions(request, url, env); }
+    catch (e) { console.error("Admin suggestion operation failed:", e); return json({ error: "Could not process the review request." }, 502); }
   }
   if (url.pathname === "/api/subscribe" && request.method === "POST") {
     try { return await handleSubscribe(request, env); }
