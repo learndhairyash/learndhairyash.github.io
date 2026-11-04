@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3fb">
+  <meta name="description" content="Share a cycling race or event with India Racing Cycles. Send any details you have for manual review.">
+  <title>Suggest an Event | India Racing Cycles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>window.IRC_CONFIG = { apiBase: "" };</script>
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body data-page="suggestion">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html" aria-label="India Racing Cycles home">
+        <span class="brand-mark"><span class="material-symbols-rounded">pedal_bike</span></span>
+        <span class="brand-copy"><strong>INDIA RACING CYCLES</strong><small>DISCOVER <i>|</i> SHARE <i>|</i> RACE</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Upcoming Events</a>
+        <a class="nav-link" href="past.html">Past Events</a>
+        <a class="nav-link" href="news.html">Cycling News</a>
+        <a class="nav-link active" href="suggest-event.html" aria-current="page">Suggest an Event</a>
+      </nav>
+      <div class="top-actions">
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch colour theme"><span class="material-symbols-rounded">dark_mode</span></button>
+        <a class="button button-tonal button-small" href="index.html#newsletter"><span class="material-symbols-rounded">mail</span> Newsletter</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <p class="eyebrow"><span class="material-symbols-rounded">campaign</span> HELP THE COMMUNITY DISCOVER MORE</p>
+      <h1>Know a race?<br><span class="headline-accent">Send it our way.</span></h1>
+      <p class="hero-lead">Found a cycling race on Instagram, Facebook, a website or a poster? Share whatever information you have here. You do not need to collect every detail before sending it.</p>
+    </section>
+
+    <section class="suggest-layout">
+      <div class="suggest-intro">
+        <p class="eyebrow">SHARE AN EVENT TIP</p>
+        <h2>Even a small clue helps.</h2>
+        <p>Paste an event page link, share the race name, add a date, or explain what you saw. Any of these can help us find the official information.</p>
+        <div class="suggest-points">
+          <div><span class="material-symbols-rounded">link</span><span><b>Social media or website link</b><small>Instagram, Facebook, organiser website, registration page or a post URL.</small></span></div>
+          <div><span class="material-symbols-rounded">calendar_month</span><span><b>Date, city or race category</b><small>Share only what you know. You can leave unknown details blank.</small></span></div>
+          <div><span class="material-symbols-rounded">fact_check</span><span><b>Manual review before publishing</b><small>Your suggestion will not appear on the calendar automatically.</small></span></div>
+        </div>
+      </div>
+
+      <form id="event-suggestion-form" class="suggest-form" novalidate>
+        <div class="form-heading">
+          <div><p class="eyebrow">EVENT INFORMATION</p><h2>What have you found?</h2></div>
+          <span class="optional-tag">All event fields optional</span>
+        </div>
+        <p class="form-help">Fill in any fields you have. At least one event detail or source link is needed so we can identify what you are sharing.</p>
+
+        <label class="field-label" for="suggest-title">Event or race name <span>Optional</span></label>
+        <input class="text-field" id="suggest-title" name="event_name" type="text" maxlength="180" placeholder="e.g. Pune to Baramati Road Race">
+
+        <label class="field-label" for="suggest-url">Event or social media link <span>Optional</span></label>
+        <input class="text-field" id="suggest-url" name="source_url" type="url" maxlength="1000" placeholder="https://www.instagram.com/... or event website">
+        <small class="field-hint">Paste the public post, event page, registration page or organiser profile URL.</small>
+
+        <div class="field-pair">
+          <div><label class="field-label" for="suggest-date">Event date <span>Optional</span></label><input class="text-field" id="suggest-date" name="event_date" type="date"></div>
+          <div><label class="field-label" for="suggest-location">City / location <span>Optional</span></label><input class="text-field" id="suggest-location" name="location" type="text" maxlength="180" placeholder="e.g. Pune, Maharashtra"></div>
+        </div>
+
+        <div class="field-pair">
+          <div><label class="field-label" for="suggest-category">Cycling category <span>Optional</span></label>
+            <select class="text-field" id="suggest-category" name="category">
+              <option value="">Not sure / not known</option><option>Road</option><option>MTB</option><option>Track</option><option>Time Trial</option><option>Gran Fondo</option><option>Ultra-cycling</option><option>Cyclocross</option><option>Cyclothon</option><option>Other</option>
+            </select>
+          </div>
+          <div><label class="field-label" for="suggest-organiser">Organiser name <span>Optional</span></label><input class="text-field" id="suggest-organiser" name="organiser" type="text" maxlength="180" placeholder="Club / association / organiser"></div>
+        </div>
+
+        <label class="field-label" for="suggest-poster">Poster or image link <span>Optional</span></label>
+        <input class="text-field" id="suggest-poster" name="poster_url" type="url" maxlength="1000" placeholder="Paste a public image URL, if available">
+
+        <label class="field-label" for="suggest-details">Anything else you know <span>Optional</span></label>
+        <textarea class="text-field text-area" id="suggest-details" name="details" rows="5" maxlength="5000" placeholder="You can paste poster text, registration details, organiser contact information, race categories, or simply explain where you found this event."></textarea>
+
+        <div class="form-divider"></div>
+        <p class="eyebrow">YOUR DETAILS (OPTIONAL)</p>
+        <div class="field-pair">
+          <div><label class="field-label" for="suggest-name">Your name</label><input class="text-field" id="suggest-name" name="contributor_name" type="text" maxlength="100" autocomplete="name" placeholder="Name"></div>
+          <div><label class="field-label" for="suggest-email">Your email</label><input class="text-field" id="suggest-email" name="contributor_email" type="email" maxlength="254" autocomplete="email" placeholder="you@example.com"></div>
+        </div>
+        <small class="field-hint">Your email is optional. Add it only if you are happy for us to contact you about this suggestion.</small>
+
+        <div class="form-trap" aria-hidden="true"><label for="suggest-website">Leave this field empty</label><input id="suggest-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <button class="button button-filled submit-suggestion" type="submit">Send event suggestion <span class="material-symbols-rounded">send</span></button>
+        <p id="suggestion-message" class="form-message form-message-dark" role="status">Suggestions are reviewed manually. Sending a suggestion does not publish an event or guarantee that it will be listed.</p>
+      </form>
+    </section>
+
+    <section class="notice-band">
+      <div class="notice-icon"><span class="material-symbols-rounded">shield</span></div>
+      <div><h3>Help us keep the calendar trustworthy</h3><p>We check the organiser's source before adding an event. Please do not send private information or login-only links.</p></div>
+      <a class="button button-tonal" href="index.html">Back to upcoming events <span class="material-symbols-rounded">arrow_forward</span></a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="index.html"><span class="brand-mark"><span class="material-symbols-rounded">pedal_bike</span></span><span class="brand-copy"><strong>INDIA RACING CYCLES</strong><small>DISCOVER <i>|</i> SHARE <i>|</i> RACE</small></span></a>
+    <p>Built for the people who race, ride, organise and cheer.</p>
+    <div class="footer-links"><a href="index.html">Upcoming events</a><a href="past.html">Past events</a><a href="news.html">Cycling news</a></div>
+    <small>Every suggestion is checked before it is added to the public calendar.</small>
+  </footer>
+</body>
+</html>
