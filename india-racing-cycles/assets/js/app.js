@@ -12,9 +12,16 @@
   }
   function dateRange(e){ if(!e.end_date) return "Starts "+fmt(e.start_date); return e.start_date===e.end_date ? fmt(e.start_date) : fmt(e.start_date)+" – "+fmt(e.end_date); }
   function links(e){
-    const arr=[]; if(e.source_url) arr.push('<a href="'+safeUrl(e.source_url)+'" target="_blank" rel="noopener">Official source ↗</a>');
-    (e.source_links||[]).forEach(l=>{if(l.url)arr.push('<a href="'+safeUrl(l.url)+'" target="_blank" rel="noopener">'+safe(l.label||"Announcement")+' ↗</a>');});
-    return arr.length?'<div class="source-links">'+arr.join("")+'</div>':"";
+    const items=[];
+    if(e.source_url) items.push({label:e.source_name||"Official event website",url:e.source_url,image_url:e.source_preview_url||e.image_url||"",kind:"Official source"});
+    (e.source_links||[]).forEach(l=>{if(l.url)items.push({label:l.label||"Original announcement",url:l.url,image_url:l.image_url||e.image_url||"",kind:l.kind||"Source link"});});
+    if(!items.length)return "";
+    return '<div class="source-previews" aria-label="Original event sources">'+items.map(item=>{
+      const thumb=item.image_url
+        ? '<img src="'+safeUrl(item.image_url)+'" alt="" loading="lazy" referrerpolicy="no-referrer">'
+        : '<span class="material-symbols-rounded" aria-hidden="true">article</span>';
+      return '<a class="source-preview-card" href="'+safeUrl(item.url)+'" target="_blank" rel="noopener"><span class="source-preview-thumb">'+thumb+'</span><span class="source-preview-body"><small>'+safe(item.kind)+'</small><b>'+safe(item.label)+'</b><span>Open original ↗</span></span></a>';
+    }).join("")+'</div>';
   }
   function eventCard(e){
     const poster=e.poster_url?'<img src="'+safeUrl(e.poster_url)+'" alt="'+safe(e.title)+' official event poster" loading="lazy" referrerpolicy="no-referrer">':(e.image_url?'<img src="'+safeUrl(e.image_url)+'" alt="'+safe(e.image_note||e.title+" official event visual")+'" loading="lazy" referrerpolicy="no-referrer"><span class="poster-caption">Official event visual · not a poster</span>':'<span class="material-symbols-rounded">pedal_bike</span><span class="poster-caption">Poster not supplied by source</span>');
