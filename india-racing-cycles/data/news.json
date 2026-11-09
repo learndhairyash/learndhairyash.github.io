@@ -1,8 +1,8 @@
 {
   "meta": {
-    "last_updated": "2026-11-08",
+    "last_updated": "2026-11-09",
     "note": "Initial launch story. The original article is linked; open it for full context.",
-    "automation_last_run": "2026-11-08T13:22:15.940997+05:30"
+    "automation_last_run": "2026-11-09T14:05:49.494389+05:30"
   },
   "news": [
     {
@@ -18,6 +18,18 @@
       "discovery_source": "Google News — Indian cycling races"
     },
     {
+      "id": "meet-car-nicobar-s-is-bridney-how-daughter-of-a-coconut-farmer-i-58b32de",
+      "title": "Meet Car Nicobar’s IS Bridney - How daughter of a coconut farmer is pedalling to excellence in Track Cycling | Profile - Livemint",
+      "published_at": "2026-11-06",
+      "publisher": "Livemint",
+      "category": "India cycling",
+      "type": "race",
+      "summary": "Meet Car Nicobar’s IS Bridney - How daughter of a coconut farmer is pedalling to excellence in Track Cycling | Profile Livemint",
+      "source_url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNSDZZWXNsMkFmTktXeHdNVUl6OUxyWERuQzJmTk5hOHRSS0NFNzE3ZGZfZFlveEVkZDc3aWJfWGMzMmc2V2lKa3daTmFmSVNSZWpGX2FNQWhORnc5bHpZTmMtM1VEWDJCTmszWXpfV3BDRlpWRnUtM0FzWEdMaXdMTVVST1FMNG5XV2F3SXlsYXBYOEhINXl3QlZuRnhCYTY0eHpwYUdHVF9UZlVidlVHbVNwNi12Q2lqMl9FZGozX243V0liNUluMVVEMFMxaU9xNDk4dHZsQVNqMmRFQ3J0bEtmSDVHNkFIeGRXX2NYSG5MbkZqSGZvaUtlU09HaGRF0gGGAkFVX3lxTFB0MGNvTWtNbU82NGgxNVg1Vzl4Ml9xU0syYkJheHFmdnlqekpyZDlDTnJCRWtDeWpNZW5BaEM1QmVXWGJYUmpUU1BaNWJMM3hIVDhhTHREeFF1Qm1jUWlpZmdLVnhmeW1BaWJpYWhPaHlwZGZrWFNXWll4Uk85bVlQbXRQWUcwTTdDREVlV2JKajdieXJ0cDJSTjJWVEpYcnlnLW1BWXJSelJlVXpIRWwycGdnSUJzb0pFc0huTjNUdDNkZ2JsaUF0TjE5OWpwaEhvZ1p4NlhISHlUdkdmWmpqeklzT19KcWhsSnVXdkswUzNIYWcyam1HSnZLQnhYS2dDaDJnYUE?oc=5",
+      "verified_at": "2026-11-09",
+      "discovery_source": "Google News — Indian cycling races"
+    },
+    {
       "id": "india-to-host-world-cycling-championship-for-first-time-ever-in--a7492a0",
       "title": "India to host World Cycling Championship for first time ever in Pune - BusinessLine",
       "published_at": "2026-10-26",
@@ -27,6 +39,18 @@
       "summary": "India to host World Cycling Championship for first time ever in Pune BusinessLine",
       "source_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOWE1kSVJPRDRpUWU4OXhCdUpzX0x5LWlkTVZGUmtiTEtvU1dRcG85ZjRtQ0k0aVFwTElhLUtkSFVUdGV0cXdUVzVIY3R5ZTAxWFgybVRXR1RyazUxblBGTzljV1NpbWE1SFFvMXE0SEdNbzNlM2UtbUhxX3k5NFQ5NjhESjNKaEFLMWVXb1c3WTBQdG5fM0kxel9SZHRvd01hWS00VjRpeGp3OWVrS0ZUU0lpSF9VeFlpYVpSb3lTckw3RmNEelhLZDNkV1hUTlpSWmRz0gHaAUFVX3lxTFB4cmRPQk9say1wREhsQ3lxbGFfS2V0bWhnNl91NGZzT3l5X2dKelhOQ29SQ0h0ZnB2OVhSd2Y5ekR2OWdydUFVNTJuQjZxUmUxN3JDVTdFSElUclJOcUZBV3c0ZkJtb3VUQmxlWXJJZ0l6aW52ZlZLY091MlpMMTJlNXZaOGNybVhibHBpOENnOGtOaklRdkx1M2JvSWRnR0QxT2RJbTVGZEtMM2M5RXZKSFhIVDFXelZKSDlfZFpEN3NuT2NLeXpGMURNVHdLaTh4bS1LXzhGT1RR?oc=5",
       "verified_at": "2026-11-05",
+      "discovery_source": "Google News — Indian cycling races"
+    },
+    {
+      "id": "india-to-host-world-cycling-championship-for-first-time-ever-in--086aeb8",
+      "title": "India to host World Cycling Championship for first time ever in Pune - BusinessLine",
+      "published_at": "2026-10-26",
+      "publisher": "BusinessLine",
+      "category": "India cycling",
+      "type": "race",
+      "summary": "India to host World Cycling Championship for first time ever in Pune BusinessLine",
+      "source_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOWE1kSVJPRDRpUWU4OXhCdUpzX0x5LWlkTVZGUmtiTEtvU1dRcG85ZjRtQ0k0aVFwTElhLUtkSFVUdGV0cXdUVzVIY3R5ZTAxWFgybVRXR1RyazUxblBGTzljV1NpbWE1SFFvMXE0SEdNbzNlM2UtbUhxX3k5NFQ5NjhESjNKaEFLMWVXb1c3WTBQdG5fM0kxel9SZHRvd01hWS00VjRpeGp3OWVrS0ZUU0lpSF9VeFlpYVpSb3lTckw3RmNEelhLZDNkV1hUTlpSWmRz?oc=5",
+      "verified_at": "2026-11-09",
       "discovery_source": "Google News — Indian cycling races"
     },
     {
@@ -546,6 +570,18 @@
       "discovery_source": "Google News — Indian cycling races"
     },
     {
+      "id": "india-win-four-medals-on-day-4-of-asian-track-cycling-championsh-5d00f59",
+      "title": "India win four medals on Day 4 of Asian Track Cycling Championship - ANI News",
+      "published_at": "2024-02-24",
+      "publisher": "ANI News",
+      "category": "India cycling",
+      "type": "race",
+      "summary": "India win four medals on Day 4 of Asian Track Cycling Championship ANI News",
+      "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNYVdSTlZEeGxvaURoWTlzSU9ZREt1Nm42YXJKZENDb3RRanJMVTV4ODMtMzQ0SXhPS0lZdU1oenIzVENRRFlzR1pXZFFOYk05WHJBNFpmZTR2WjVrRHRwaHdYMndfMHhmV1pIbnFIaENzdzg1blNwa1ktaUJZVjBzWWRGVURXZ3JCV0h4NU1UY2o1Q3JXdFhZd3FWR19GalFDQ1l6VE1OY0ZXajhWWWZPRnp2ZHVtRlNfVU14Ti1BUQ?oc=5",
+      "verified_at": "2026-11-09",
+      "discovery_source": "Google News — Indian cycling races"
+    },
+    {
       "id": "asian-track-cycling-championships-2024-get-schedule-and-watch-li-8adbc2c",
       "title": "Asian Track Cycling Championships 2024: Get schedule and watch live streaming in India - www.olympics.com",
       "published_at": "2024-02-20",
@@ -591,6 +627,18 @@
       "summary": "Asian Track Cycling Championship 2023: India’s Ronaldo Laitonjam wins silver medal Olympics",
       "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQSW1NOFAweGdIX2FYc3Y4empTSHV1N1E1YWdaSlFRM0ZXOVdSS0Rvd1Vzc2FwZnRIbTFFRXZfQ05YdW0zQkxGZVBVLXI1VTFzSzY2M3Eyc1c4R1RmUXpkR0NUR2dXNzFIbWJmSTVteFlXejdaNlNadDhSLTJkYTJ6VXNpbERXcENER1MzYWhoM3AwZC1BQ0JZTS0wOVZHQQ?oc=5",
       "verified_at": "2026-11-05",
+      "discovery_source": "Google News — Indian cycling races"
+    },
+    {
+      "id": "asian-track-cycling-championship-2023-india-s-ronaldo-singh-crea-12a0761",
+      "title": "Asian Track Cycling Championship 2023: India’s Ronaldo Singh creates national record - Olympics",
+      "published_at": "2023-06-15",
+      "publisher": "Olympics",
+      "category": "India cycling",
+      "type": "race",
+      "summary": "Asian Track Cycling Championship 2023: India’s Ronaldo Singh creates national record Olympics",
+      "source_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOa21mbEtWNGlIckMta250Y2pxeVU4ZEZBYklRM1k3UzV4ajZhQnVDNjQ3eEo4RTRZTVk5QVlCQl9oMGRCWjJnYjFMVzlOb0VHRVJOUklHMGNEN05uNzZBMnBiVHU5RkFkaGx5azg1UjRObTJoUC1rczBWNk9kdEhmdjdzYnVhbW5WTU42ZVJsUkV4ZnBUeWpDY1g4X3M0cHVQV1E?oc=5",
+      "verified_at": "2026-11-09",
       "discovery_source": "Google News — Indian cycling races"
     },
     {
