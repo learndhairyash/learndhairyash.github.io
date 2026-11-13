@@ -1,8 +1,8 @@
 {
   "meta": {
-    "last_updated": "2026-11-12",
+    "last_updated": "2026-11-13",
     "note": "Initial launch story. The original article is linked; open it for full context.",
-    "automation_last_run": "2026-11-12T14:16:07.826509+05:30"
+    "automation_last_run": "2026-11-13T14:09:59.449860+05:30"
   },
   "news": [
     {
@@ -378,6 +378,18 @@
       "discovery_source": "Google News — Indian cycling announcements and results"
     },
     {
+      "id": "commonwealth-games-2026-ronaldo-singh-david-beckham-and-india-en-1e2732e",
+      "title": "Commonwealth Games 2026: Ronaldo Singh, David Beckham and India end campaign medal-less in cycling - Olympics",
+      "published_at": "2026-08-02",
+      "publisher": "Olympics",
+      "category": "India cycling",
+      "type": "race",
+      "summary": "Commonwealth Games 2026: Ronaldo Singh, David Beckham and India end campaign medal-less in cycling Olympics",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNMjRCM2Y1d3lkOE5FV3kxNTdudy0xNFFIeWNhbDZOV0o1dHBUVF9wV0Y1SkdkLS1ILVhEaXF5aHJ6M2l1RlpmaU9EVWhSNFg3UGpwUDd2dDlJRW93cDZYOWd4VU5SVTZwS2NCZlNJUmxpZ2txR2NWaUdxcUlNVlRhejNCT2NmNzhVZEkw?oc=5",
+      "verified_at": "2026-11-13",
+      "discovery_source": "Google News — Indian cycling announcements and results"
+    },
+    {
       "id": "cwg-2026-india-schedule-today-august-2-avtar-singh-leads-judo-pu-2db6e6e",
       "title": "CWG 2026 India schedule today, August 2: Avtar Singh leads judo push; cycling and closing ceremony on final day - Olympics",
       "published_at": "2026-08-01",
@@ -471,6 +483,18 @@
       "summary": "Pune Grand Tour 2026: Fergus Browning claims prologue as India’s first continental cycling road race gets underway Olympics",
       "source_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNejNxcXFDWnRTVU5mRzBCVDBGVDdxNk1sZnREMzJyTUZqRmtoeUppTzNlaWxkQUp1blJIdEJiMndrcHJiLTR5RVdOZEtnWHdESnpqcENCZG1aOUdsTHpkNmtFc2lEV2V2eUdFT2pScDlYTElnU3UzUmVkUDNUVThmT3I0TQ?oc=5",
       "verified_at": "2026-11-05",
+      "discovery_source": "Google News — Indian cycling announcements and results"
+    },
+    {
+      "id": "pune-grand-tour-how-a-lapsed-cycle-city-clinched-india-s-biggest-c25dadf",
+      "title": "Pune Grand Tour: How a lapsed ‘cycle city’ clinched India’s biggest international cycling race - The Indian Express",
+      "published_at": "2026-01-19",
+      "publisher": "The Indian Express",
+      "category": "India cycling",
+      "type": "race",
+      "summary": "Pune Grand Tour: How a lapsed ‘cycle city’ clinched India’s biggest international cycling race The Indian Express",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOMGhJOHNLWXZqc2p1MS1OZUVURmh5UHotX2h5TkhzcWl3OFNiTmREVVdLakxMQi15ZG9TVm4wTEhQbWRwOUZfeW5kYlZXNWF3QVNvajhQZk91LVFuTUVtY1FrQzNoRHdUWklMT2gxS2gwYVlaekJWaVBNOW5OTmd6d3JxcGd2OThxSUliVmt6Szk2c21TMy0yX01XONIBogFBVV95cUxPX3FoSkhRZEN3cTktbTVUS0RCeUR0SktUbGRaNi1Db29GMlQ3TFB2Y1U3V1NYOGdNN1V5ZzdUQl9pTlRkb185bzdjTXYyMExOcllicDlZOEg2Ujhxcm1pSk0wbHZUTno0dnVWRnllbDJndlVVNW1STWFiRlh1OFdPMHF5VVpFRXhKTDdKVm14Y3BVREJhWjZSbTgxa09sWEU0MFE?oc=5",
+      "verified_at": "2026-11-13",
       "discovery_source": "Google News — Indian cycling announcements and results"
     },
     {
@@ -699,6 +723,18 @@
       "summary": "Asian Track Cycling Championships 2022: Indian cyclists win two bronze medals on Day 2 Olympics",
       "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTEhKVVhmXzNPbjR4Z2lPRXNyT0phd1M5UEdDYUxoOHN6dW9LUTVSUTU3SExzM0NnWW1VSFFmYmxoN0tPSXVfUi1wd1VMVUFlUXQ2U3VYalRiMUhJUGJhNWpjalcyUUhhUy10YjYwNDJaOUJFdTNHUTJONzAzSE9TTERLVmxIczdnUnRNMXRNQ0o0bE83bFE?oc=5",
       "verified_at": "2026-11-05",
+      "discovery_source": "Google News — Indian cycling races"
+    },
+    {
+      "id": "asian-track-cycling-championships-2022-india-s-ronaldo-esow-look-a844b7e",
+      "title": "Asian Track Cycling Championships 2022: India’s Ronaldo, Esow look to shine in Paris 2024 Olympic qualifiers at home - Olympics",
+      "published_at": "2022-06-18",
+      "publisher": "Olympics",
+      "category": "India cycling",
+      "type": "race",
+      "summary": "Asian Track Cycling Championships 2022: India’s Ronaldo, Esow look to shine in Paris 2024 Olympic qualifiers at home Olympics",
+      "source_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMzBRSThpV1N4dE1fWHYxb3hDWmRzcGNKaVpZblNYTUg0bU1hWTFxLXdodEpDNTIwdkM4THRERThLd3EzZW95OGxyZmhxdjhwTlZ1S0lUdkROV2pPT0RmWHJWVmNHNEJRaXZ5TzVRbzlLM1NicGxvem45RHpWZURoRzhXOXpHa0h3MXR0R242WFhSMVd6UlpDVVFMS1Y1c3plTFE?oc=5",
+      "verified_at": "2026-11-13",
       "discovery_source": "Google News — Indian cycling races"
     }
   ]
