@@ -1,8 +1,8 @@
 {
   "meta": {
-    "last_updated": "2026-11-22",
+    "last_updated": "2026-11-23",
     "note": "Initial launch story. The original article is linked; open it for full context.",
-    "automation_last_run": "2026-11-22T14:12:21.941921+05:30"
+    "automation_last_run": "2026-11-23T15:09:33.517037+05:30"
   },
   "news": [
     {
@@ -282,6 +282,18 @@
       "discovery_source": "Google News — Indian cycling races"
     },
     {
+      "id": "uci-to-bring-cycling-road-world-championships-to-india-in-2032-s-2bebc4e",
+      "title": "UCI to Bring Cycling Road World Championships to India in 2032 - Sportcal",
+      "published_at": "2026-09-24",
+      "publisher": "Sportcal",
+      "category": "India cycling",
+      "type": "race",
+      "summary": "UCI to Bring Cycling Road World Championships to India in 2032 Sportcal",
+      "source_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNN1dXMjd1eFJsOE9nT3RhMzhCM0dSNHd6VXJnWWplNjMwTzBVZjRVZEN3Q1BIcHVfcVRLRTctcWxBUG1qc0kzTlpKSjFhdGZfMXlkMktrdTJZeGQ1cFdfbUVLS2J6MzZPVUh0Sko3ZndDOEF5RWs4VVUzdmtpRGQxb0IzWDYtLUdyTzFHVUFtc0daVHFiOEhNa3BlTXBCaWl1bVE?oc=5",
+      "verified_at": "2026-11-23",
+      "discovery_source": "Google News — Indian cycling races"
+    },
+    {
       "id": "india-confirmed-as-host-of-2032-cycling-road-world-championships-d296ce7",
       "title": "India confirmed as host of 2032 Cycling Road World Championships - The Athletic - The New York Times",
       "published_at": "2026-09-23",
@@ -366,6 +378,30 @@
       "discovery_source": "Google News — Indian cycling announcements and results"
     },
     {
+      "id": "indian-para-cyclists-win-12-medals-at-uci-event-in-denmark-telan-ae15f0f",
+      "title": "Indian para-cyclists win 12 medals at UCI event in Denmark - Telangana Today",
+      "published_at": "2026-08-10",
+      "publisher": "Telangana Today",
+      "category": "India cycling",
+      "type": "race",
+      "summary": "Indian para-cyclists win 12 medals at UCI event in Denmark Telangana Today",
+      "source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOMXhQczBGQkwwdVVlMDdFU0IySVJlQjdHQ0g0cld3UVlqcjdwT0NBSmVJQ2c2dkViVFEwaDZCNHhna3lCZXk5NXRKTEhFTUFHcGhGWU5pTE1HRm10WmxlR2NRdVVPdDAyZG80TkRSZ2lNVEh2Qm1EQW5EWE5ZSDNsNDlqM1hOMFQxR0luX2tB?oc=5",
+      "verified_at": "2026-11-23",
+      "discovery_source": "Google News — Indian cycling announcements and results"
+    },
+    {
+      "id": "12-medals-for-india-at-uci-para-cycling-track-event-in-odense-de-4128d0c",
+      "title": "12 Medals For India At Uci Para Cycling Track Event In Odense, Denmark. - TRIPURA STAR NEWS",
+      "published_at": "2026-08-10",
+      "publisher": "TRIPURA STAR NEWS",
+      "category": "India cycling",
+      "type": "race",
+      "summary": "12 Medals For India At Uci Para Cycling Track Event In Odense, Denmark. TRIPURA STAR NEWS",
+      "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPMzNMckxJcFE2QUFSSnhsdERIRHpHMlJFYlpKbzBzNmhpZWNGejlWZnpmdHJHdmU5VVVseE9OcmNxWnE1RDNkb3NycFpwMVV1bjc5QURFOHM3dGdwTDBQQVVJaFZxQVBuczJBZnR5czBIcmZ0dXluRm41Ti1SLUJiYjRDNTBYaWJDak9zZjZ2RE1HUEg3bWZjdlo5REEyYlhMLTlaMw?oc=5",
+      "verified_at": "2026-11-23",
+      "discovery_source": "Google News — Indian cycling announcements and results"
+    },
+    {
       "id": "cwg-2026-indian-cyclists-fail-to-impress-in-men-s-4000m-individu-857d994",
       "title": "CWG 2026: Indian cyclists fail to impress in men’s 4000m individual pursuit, keirin events - Sportstar",
       "published_at": "2026-08-07",
@@ -414,6 +450,18 @@
       "discovery_source": "Google News — Indian cycling announcements and results"
     },
     {
+      "id": "para-cyclist-lisha-das-finishes-6th-in-india-s-last-event-of-com-d3ee5cd",
+      "title": "Para Cyclist Lisha Das Finishes 6th In India's Last Event Of Commonwealth Games 2026 - NDTV Sports",
+      "published_at": "2026-08-02",
+      "publisher": "NDTV Sports",
+      "category": "India cycling",
+      "type": "race",
+      "summary": "Para Cyclist Lisha Das Finishes 6th In India's Last Event Of Commonwealth Games 2026 NDTV Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNYlpaMHdxOWFmbENMTW9QTGNOWGQ0anNLeXVQN2JxdlpOX1JHREVBTURRVWM0dEZ3SzE0eHVNUWV4NlA1UU02cjhMN0VqcjlyYlMxRHI5R3o1NW9OV2lhcmdCMkg3YTJFMnVMdVN2aHowWEdsYVBuOFU1UDNNZVNsaHl1T1A1MVhaOVJXSF9RMFd6TVotNXh0a2xSSWlwc0tfVl8yQUYwaGp1SVJfc0xsZ0xtRkdPWnlFZ3dCaFV1NzdNLUFNdHhxdzM5OHA5ckNjN1A1bHg5OA?oc=5",
+      "verified_at": "2026-11-23",
+      "discovery_source": "Google News — Indian cycling announcements and results"
+    },
+    {
       "id": "cwg-2026-india-schedule-today-august-2-avtar-singh-leads-judo-pu-2db6e6e",
       "title": "CWG 2026 India schedule today, August 2: Avtar Singh leads judo push; cycling and closing ceremony on final day - Olympics",
       "published_at": "2026-08-01",
@@ -423,6 +471,18 @@
       "summary": "CWG 2026 India schedule today, August 2: Avtar Singh leads judo push; cycling and closing ceremony on final day Olympics",
       "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWVl4dmE4ZEZpN21vMWY5bTU5dW9DOWctbE9KTkRJb0pUS3pRNjhjN2NxaDZCRi1oQWJ6SnV6dnpDRkFBeWxJYWo3cGdSNW4zVnZEdDMwSmI1TTNwOWhtd0FxRWtJVU5GbEJPWXRZNG1WWnNUUS1tRTMzNG1nc1ctSGlIbUI2dkFXY2JOamViNzZTZjdhdnlvYQ?oc=5",
       "verified_at": "2026-11-05",
+      "discovery_source": "Google News — Indian cycling announcements and results"
+    },
+    {
+      "id": "men-s-javelin-throw-final-is-the-main-highlight-for-india-today--b14cf75",
+      "title": "Men's Javelin Throw Final is the main highlight for India today! 🇮🇳🇮🇳 Then there's also Judo, Track Cycling and more medal events in Athletics. 🥋🚲 Check India's schedule 👇 - Facebook",
+      "published_at": "2026-07-31",
+      "publisher": "Facebook",
+      "category": "India cycling",
+      "type": "race",
+      "summary": "Men's Javelin Throw Final is the main highlight for India today! 🇮🇳🇮🇳 Then there's also Judo, Track Cycling and more medal events in Athletics. 🥋🚲 Check India's schedule 👇 Facebook",
+      "source_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQaDF1aDNua1o5Sk9GVUlWWE4tbFZRTTZYOHFLc0tkRmhYcEJKLVhVaUk3MWt5UE1TZnl4dWM4MWJqODRxVzhmbll5S215MzNqVENNMmNBbkJQMzZ3bkdFN0NtV2YtZGU0ZDJxbnZ4Yi1Ud1dIdFhYLUZnMlZPTmxwNzhxWjRiUWs2d05TMTNUTjZMaEpadzBCb3ZuMDFULWJIQmFERWIzRzZBaWtQdG00NDF5MDJZMXhnTWFMRHRzTEc1YU9PU2c1NUJpVXc5S28yblZV?oc=5",
+      "verified_at": "2026-11-23",
       "discovery_source": "Google News — Indian cycling announcements and results"
     },
     {
@@ -508,6 +568,18 @@
       "source_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMXJLeDlNVUFLdEN4ZDdnMktQV0ZhZHM2NEJ6bm1WcFZpM1owVjhyb25rN1gybWJYRDBQWHJhRnB4eFRDeTlUVUtKVG5RbHdsQnc4dk9oZ1dtTG5WNExxWkJVMjNUSHZsdHJZbkRDZXBrNDQ5VHF0ZVFmNTRfTlNQMkNiTW1panpoa01oTGY0R3lmUVEyX25jSWp6WENzR19qS1Q5bXpXZ2xKOW5DWkxUS3Y0X3dqSi1jdlBucGFtOF9ONVVYOHVhWmkwT042cUduUWloUdIB2gFBVV95cUxNdHhlRTZsN2JPdTZFRDhhNTVxOURVcjRsWnlGdktPbTYyZXJJcUlVNmhjVEpMT3RSekdnMldONlVyaDF1Rnd1a1hJbUg2WkpSZnFmZFdmQkFQU294NG45LWhYTUNPRkp4TGVEa05WNWo3NDF5Slgwakh3enI2UThHbkpSQnlNeVR5TWVGcWd2clIxY29pR1g4a0taekYtTGhyQXRrRFNBeGF1VzZBc2tNTjY1Y1dleURjeG5lRUdFbEJrajRGWDJHQlNlbml2X1pKZGp3eGl6Tlczdw?oc=5",
       "verified_at": "2026-11-19",
       "discovery_source": "Google News — Indian cycling races"
+    },
+    {
+      "id": "gpnews1703-indian-cycling-is-making-big-moves-global-pelotonhttp-2c91c18",
+      "title": "#GPNews1703 - Indian cycling is making big moves - Global Peloton",
+      "published_at": "2026-03-17",
+      "publisher": "Global Peloton",
+      "category": "India cycling",
+      "type": "race",
+      "summary": "#GPNews1703 - Indian cycling is making big moves Global Peloton",
+      "source_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1TUmpRc3E1NGoya3JTQjRlQTlDZS1MNDFnRVAwV2NGUHhtaDVyZnNvQUM5cGhCQWI0aW5iWlNQZXQtYlhPLTRGZzI4TDRKc3NSemxCMDRXeVBPZ2IyV3hMWkpvbFotQTBkakszZUY3eDV5cTI0MWZpNlkyUkY?oc=5",
+      "verified_at": "2026-11-23",
+      "discovery_source": "Google News — Indian cycling announcements and results"
     },
     {
       "id": "big-plans-afoot-for-cycling-in-india-as-world-s-first-franchise--e89d244",
