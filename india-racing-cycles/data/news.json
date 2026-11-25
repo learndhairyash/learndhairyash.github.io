@@ -1,8 +1,8 @@
 {
   "meta": {
-    "last_updated": "2026-11-24",
+    "last_updated": "2026-11-25",
     "note": "Initial launch story. The original article is linked; open it for full context.",
-    "automation_last_run": "2026-11-24T17:01:14.401086+05:30"
+    "automation_last_run": "2026-11-25T15:50:17.650857+05:30"
   },
   "news": [
     {
@@ -136,6 +136,18 @@
       "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPcEhhZkp5ZFFuNUpCaFlQSWNFdVNTR2hpZW1ZQnNfanRBNE5hdWttYVB4QzBRN0pCOE84RUxvWUVXVnJQTF90dWxvWmVMTDJaalh6dXZEd29BbkpvZXgtVm8yTFFaNmt5d1NHNWNteGk3REw2Vjg0U1BIMW8xR2VqOFZjQzZ1c0ozaXQxUlhmX0E4YUZzM3hXaTBqMm9RSWdMdkZkOFZDZm0?oc=5",
       "verified_at": "2026-11-05",
       "discovery_source": "Google News — Indian cycling announcements and results"
+    },
+    {
+      "id": "800-cyclists-converge-on-mahendragiri-for-national-mtb-champions-33af8d3",
+      "title": "800 cyclists converge on Mahendragiri for National MTB Championship - The Times of India",
+      "published_at": "2026-10-02",
+      "publisher": "The Times of India",
+      "category": "India cycling",
+      "type": "race",
+      "summary": "800 cyclists converge on Mahendragiri for National MTB Championship The Times of India",
+      "source_url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPLTBqZFhJdm9GeUJuUG1qZEFoTnRiTW9jNXFPaHEyQTQ5ZjlYVFE4TWsxTWQ5VVRHaU91TXp5ZXdDdzdza3czb3gzWUJUalR1ZXoxcUtmQXRuWDJSV0cxTGhTSWZTazJsZXZqaElHalFWZHM1cmdaX080eTYtVGZXSV9ZazJFeU9McERDRkU0TVUtZ1ItRFlzSklOWjlQREJucXZjX1JESktJOTRTU1hzWWY0a3p0TmNob0pBVWIzbldCWndCdmw4N25QTXV4dDliSzIyTlFwY0ZsQ2RuWGZz0gHkAUFVX3lxTE1HZ2NyMXh5V1pxa1dhQmFVSnk0d0F4SThSTVBncHJYblhHMTJTZmpUX0hNblpqdVJkWERSdU0yVXNBQTZPLXFxMnhrS1pacTB2T3Jac3d3R1RWU1BOOXRhMkEwWGV6VEt1LWRrNDQtWHo2YkVSTHRTa0lvSG5Jc1NCbVVMVUF0UzRtTDZEVlpaSGw2YlRSUXRwWmc1VE1VUnh1Q2NoSFJWZXYxb0dtN0p3aGdBd3Nla3pyRVZoVTBiWXQtem05V3hudFQ0R0pkTVV3bTRmZEljVFB4dWlVTFNhRzhQag?oc=5",
+      "verified_at": "2026-11-25",
+      "discovery_source": "Google News — Indian cycling races"
     },
     {
       "id": "asian-games-2026-india-bows-out-of-track-cycling-medal-contentio-d7bf64c",
@@ -306,6 +318,18 @@
       "discovery_source": "Google News — Indian cycling races"
     },
     {
+      "id": "india-to-host-first-cycling-world-championships-in-2032-the-dail-d2bd5c9",
+      "title": "India to host first cycling world championships in 2032 - The Daily Star",
+      "published_at": "2026-09-24",
+      "publisher": "The Daily Star",
+      "category": "India cycling",
+      "type": "race",
+      "summary": "India to host first cycling world championships in 2032 The Daily Star",
+      "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOczY4cGhJTjhFYVJyWENkd2stUEUwZktTQXpsdWJXa2FQTE1UaXBCNURDYThfWWJVZTNvcHhuNlJuVGFhSXh3cWczZDNfOGZRT1Y0TUhCNTZ2REJ5SUVSYW13MmkxckFDSEFxQTNITzF2OUk3YkVxeXk3ejNLRURmR0JMdUE3cTNjRTl4bVZNN3pzMmd0cklVRWRVM3RrRy1DbzVzSTZCTUkwTENidlByZm4xSFhWcWt1RHc?oc=5",
+      "verified_at": "2026-11-25",
+      "discovery_source": "Google News — Indian cycling races"
+    },
+    {
       "id": "india-confirmed-as-host-of-2032-cycling-road-world-championships-d296ce7",
       "title": "India confirmed as host of 2032 Cycling Road World Championships - The Athletic - The New York Times",
       "published_at": "2026-09-23",
@@ -390,6 +414,18 @@
       "discovery_source": "Google News — Indian cycling announcements and results"
     },
     {
+      "id": "7-medals-for-cyclists-from-mysuru-district-at-karnataka-champion-2424953",
+      "title": "7 medals for cyclists from Mysuru district at Karnataka championship - The Hindu",
+      "published_at": "2026-08-12",
+      "publisher": "The Hindu",
+      "category": "India cycling",
+      "type": "race",
+      "summary": "7 medals for cyclists from Mysuru district at Karnataka championship The Hindu",
+      "source_url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPSXpWMmlqYjdFNV9nNXVVRE4zVllHUF9vTDdXWFRDTVIzenNfTDB0RVZBS3MtNXhraGUtVlg0eXBZcThWYWlBa3ZpaFZiNHJJd0xicWRVNVMxck0wRzhtZDJGa1ZhQm1ESWtuaEZnN2JOaTVqdl9NNFdBbERaNVRuOXlmMUNqdTJJZlZaMHozdVpvZlRGa2FqNno4SXY3TlVPZGFQbTZzV0ZkUjNaNXN2M05NLUxfc1VUYklkQ25pdUJXcEFzSWpxcnBkbzg3Z2huMTMzeGcxRnrSAd8BQVVfeXFMUGR0eEdNNVVnREJuc0RVbGUwNTQwSVJXdVlBRkpBaGxRMS0xOExUQ290M0g2MUl3VHpJV1QycEc2Zi13Q3NuZ2tzSkhrSXI0amtydmdHdjAydFlaMllVdkhucHFGNHhjNUFldGpMVmpIaUVVVEx6cVJnUmdvYjRSWlVGWmlnTGhTMjNxQnAydGVmTkFSX1ZhODM3Y3JxazZJa3lnM1I4YjNQX3B5WlVXaU10dnV5TDY1RExOY0lONnduNnMxRGVQaUlRa2pIeXd0RFpiWlhZOWU3NkZGYTBDTQ?oc=5",
+      "verified_at": "2026-11-25",
+      "discovery_source": "Google News — Indian cycling races"
+    },
+    {
       "id": "indian-para-cyclists-win-12-medals-at-uci-event-in-denmark-telan-ae15f0f",
       "title": "Indian para-cyclists win 12 medals at UCI event in Denmark - Telangana Today",
       "published_at": "2026-08-10",
@@ -436,6 +472,18 @@
       "source_url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNUTVOMkFmdzhmR0VETW5LeHdOZ3VBMkFwMWx4bGxTbFpCcGRVRzBvbzdTQ1J2bzBMdkQ0eDY1aGhLX3lqQ1pUWkdBNGRYUFE1OXBMc0pISXBLUFk5SGFobmw2Mk0tN1I3YkI2eEM4czFZMGRTR2puby1XNlpDNlVwTHlPR2t5cXJDcV9KRFFhM0ZhT3lOVWxIcHJZUWlFQmhIRy1raENvOXNScjdUUW1RNkNQNjdwWTZVSlRkdk54RmxqS01iSTlnSzl5WmxJbjhDQ2VXVk1aSW9nYXNGSDM2bTBPSEJIak5PbWpiQzFfc2PSAfcBQVVfeXFMTmhtWTBPNS1jdjFCcmdUekxoSVQtU2R0T2xCRmdwX2VmTVl6Um42QUxWS3FRS0haTUdQWC1BQzVtbDBaNER2Qk5Ud2VTaDJ4M0U1Y1Azd1lKQUN3VFI2dWllVzBuWUFHQ3Mwc2N4aGliYS14UUV2SUtmQnhkdi13emliYVc3UFhUYkdCd2x4TFJGVDhHcTFmTjF3QlIxSDBCbTgxSWxWS1pVUEhkaUl5eWZsLWQtOWZjUnVqOUVrRWdGdzluOEZvdmM4b1U1RXBuUHRSQWlTLUVIQ1BZdzhCeHlQbDZNQzlsWVRaRURWUENIVkpSNXUzYw?oc=5",
       "verified_at": "2026-11-05",
       "discovery_source": "Google News — Indian cycling announcements and results"
+    },
+    {
+      "id": "tour-de-france-femmes-2026-harshita-jakhar-becomes-first-indian--90b0686",
+      "title": "Tour de France Femmes 2026: Harshita Jakhar becomes first Indian woman to feature at iconic cycling race - Olympics",
+      "published_at": "2026-08-03",
+      "publisher": "Olympics",
+      "category": "India cycling",
+      "type": "race",
+      "summary": "Tour de France Femmes 2026: Harshita Jakhar becomes first Indian woman to feature at iconic cycling race Olympics",
+      "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNR0JpTWlrdmh0ZzlTZ1JUUVNVMFZJSzRMWUphUnNCQk9GSFQwaW5oeGFMWlB3Z0NGRzMzTUF2djd3RDNlRUdEenJoamlidUVYanBTdjdTaGRnZ1o3SUI5TjgybEtqVGZONENPYTdNVXVHVDJ3TVdLd2xrX084UzRwNmJlbXdqekNoR0QwbnpENEM4NjA?oc=5",
+      "verified_at": "2026-11-25",
+      "discovery_source": "Google News — Indian cycling races"
     },
     {
       "id": "for-the-final-time-in-the-2026-edition-of-commonwealth-games-her-148044b",
